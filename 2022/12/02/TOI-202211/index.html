@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/algosolution/img/fluid.png">
+  <link rel="icon" href="/algosolution/img/fluid.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="因為感覺沒甚麼人在寫TOI練習賽題解，而且為了拯救快變成修課筆記的競程筆記，想說來寫看看 Cycleproblem給定一有向圖，求能夠到達任一環路的所有點集合。 solution開一個陣列倒著記錄每一個有向邊。再用一個陣列記錄入度，跑一次拓樸排序，剩下入度不為0的點即是環路及可到達環路的點（因為是倒著紀錄）。 code              code                   &#x2F;&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2022.11 TOI 潛力組題解">
-<meta property="og:url" content="http://mysh212.github.io/2022/12/02/TOI-202211/index.html">
+<meta property="og:url" content="http://mysh212.github.io/algosolution/2022/12/02/TOI-202211/index.html">
 <meta property="og:site_name" content="ysh&#39;s note">
 <meta property="og:description" content="因為感覺沒甚麼人在寫TOI練習賽題解，而且為了拯救快變成修課筆記的競程筆記，想說來寫看看 Cycleproblem給定一有向圖，求能夠到達任一環路的所有點集合。 solution開一個陣列倒著記錄每一個有向邊。再用一個陣列記錄入度，跑一次拓樸排序，剩下入度不為0的點即是環路及可到達環路的點（因為是倒著紀錄）。 code              code                   &#x2F;&#x2F;">
 <meta property="og:locale" content="zh_TW">
@@ -61,33 +61,33 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/algosolution/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/algosolution/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/algosolution/css/highlight-dark.css" />
   
 
 
 
   
-<link rel="stylesheet" href="/custom.css">
+<link rel="stylesheet" href="/algosolution/custom.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"mysh212.github.io","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-9YZGSF09K8","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"mysh212.github.io","root":"/algosolution/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-9YZGSF09K8","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/algosolution/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/algosolution/js/utils.js" ></script>
+  <script  src="/algosolution/js/color-schema.js" ></script>
   
 
   
@@ -131,7 +131,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/algosolution/">
       <strong>ysh&#39;s blog</strong>
     </a>
 
@@ -150,7 +150,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/algosolution/">
                 <i class="iconfont icon-home-fill"></i>
                 首頁
               </a>
@@ -162,7 +162,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/algosolution/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 庫存
               </a>
@@ -174,7 +174,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/algosolution/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分類
               </a>
@@ -186,7 +186,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/algosolution/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 標籤
               </a>
@@ -198,7 +198,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/algosolution/about/">
                 <i class="iconfont icon-user-fill"></i>
                 關於
               </a>
@@ -227,7 +227,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/algosolution/img/default.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -488,12 +488,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%B3%87%E8%A8%8A/" class="category-chain-item">資訊</a>
+  <a href="/algosolution/categories/%E8%B3%87%E8%A8%8A/" class="category-chain-item">資訊</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%B3%87%E8%A8%8A/%E9%A1%8C%E8%A7%A3/" class="category-chain-item">題解</a>
+  <a href="/algosolution/categories/%E8%B3%87%E8%A8%8A/%E9%A1%8C%E8%A7%A3/" class="category-chain-item">題解</a>
   
   
 
@@ -510,11 +510,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/algo/">#algo</a>
+        <a href="/algosolution/tags/algo/">#algo</a>
       
-        <a href="/tags/solution/">#solution</a>
+        <a href="/algosolution/tags/solution/">#solution</a>
       
-        <a href="/tags/exam/">#exam</a>
+        <a href="/algosolution/tags/exam/">#exam</a>
       
     </div>
   
@@ -527,7 +527,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>2022.11 TOI 潛力組題解</div>
-      <div>http://mysh212.github.io/2022/12/02/TOI-202211/</div>
+      <div>http://mysh212.github.io/algosolution/2022/12/02/TOI-202211/</div>
     </div>
     <div class="license-meta">
       
@@ -576,7 +576,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/12/05/%E5%BE%AE%E7%A9%8D%E5%88%86%E4%B8%8A%E8%AA%B2%E7%AD%86%E8%A8%985/" title="微積分上課筆記5">
+                      <a href="/algosolution/2022/12/05/%E5%BE%AE%E7%A9%8D%E5%88%86%E4%B8%8A%E8%AA%B2%E7%AD%86%E8%A8%985/" title="微積分上課筆記5">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">微積分上課筆記5</span>
                         <span class="visible-mobile">上一篇</span>
@@ -586,7 +586,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/11/28/%E5%BE%AE%E7%A9%8D%E5%88%86%E4%B8%8A%E8%AA%B2%E7%AD%86%E8%A8%984/" title="微積分上課筆記4">
+                      <a href="/algosolution/2022/11/28/%E5%BE%AE%E7%A9%8D%E5%88%86%E4%B8%8A%E8%AA%B2%E7%AD%86%E8%A8%984/" title="微積分上課筆記4">
                         <span class="hidden-mobile">微積分上課筆記4</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -603,7 +603,7 @@
     <div id="giscus" class="giscus"></div>
     <script type="text/javascript">
       Fluid.utils.loadComments('#giscus', function() {
-        var options = {"repo":"mysh212/mysh212.github.io","repo-id":"MDEwOlJlcG9zaXRvcnkzNTY0ODM5NzA=","category":"Announcements","category-id":"DIC_kwDOFT-Dgs4CSnb8","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-TW"};
+        var options = {"repo":"mysh212/algosolution","repo-id":"MDEwOlJlcG9zaXRvcnkzNTY0ODM5NzA=","category":"Announcements","category-id":"DIC_kwDOFT-Dgs4CSnb8","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-TW"};
         var attributes = {};
         for (let option in options) {
           if (!option.startsWith('theme-')) {
@@ -784,8 +784,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/algosolution/js/events.js" ></script>
+<script  src="/algosolution/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -807,7 +807,7 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/algosolution/js/img-lazyload.js" ></script>
   
 
 
@@ -951,7 +951,7 @@
 
   <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/algosolution/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -961,7 +961,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/algosolution/js/boot.js" ></script>
 
 
   
