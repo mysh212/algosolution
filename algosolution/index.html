@@ -1,0 +1,2175 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/algosolution/img/fluid.png">
+  <link rel="icon" href="/algosolution/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="ysh">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="“palace tags:  emissary&quot;.cpp [time&#x3D;]  code AGAR-king2.cpp tags:  priority_queue [time&#x3D;02,04,2022 Fri 14:32:20,17]  code AP325-d010.cpp tags:  queue [time&#x3D;02,23,2022 Wed  8:48:27,43">
+<meta property="og:type" content="article">
+<meta property="og:title" content="algosolution">
+<meta property="og:url" content="http://mysh212.github.io/algosolution/algosolution/index.html">
+<meta property="og:site_name" content="ysh&#39;s note">
+<meta property="og:description" content="“palace tags:  emissary&quot;.cpp [time&#x3D;]  code AGAR-king2.cpp tags:  priority_queue [time&#x3D;02,04,2022 Fri 14:32:20,17]  code AP325-d010.cpp tags:  queue [time&#x3D;02,23,2022 Wed  8:48:27,43">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-11-13T14:41:04.000Z">
+<meta property="article:modified_time" content="2023-03-19T08:05:59.210Z">
+<meta property="article:author" content="ysh">
+<meta property="article:tag" content="algo">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>algosolution - ysh&#39;s note</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/algosolution/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/algosolution/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/algosolution/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/algosolution/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"mysh212.github.io","root":"/algosolution/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-9YZGSF09K8","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/algosolution/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/algosolution/js/utils.js" ></script>
+  <script  src="/algosolution/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=G-9YZGSF09K8', function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9YZGSF09K8');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/algosolution/">
+      <strong>ysh&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/algosolution/">
+                <i class="iconfont icon-home-fill"></i>
+                首頁
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/algosolution/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                庫存
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/algosolution/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分類
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/algosolution/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                標籤
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/algosolution/about/">
+                <i class="iconfont icon-user-fill"></i>
+                關於
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/algosolution/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="algosolution"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-11-13 22:41" pubdate>
+          2022年11月13日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          19k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          160 分鐘
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">algosolution</h1>
+            
+              <p class="note note-warning">
+                
+                  
+                    本文最後更新於：2023年3月19日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p><em><strong>“palace</strong></em></p>
+<h6 id="tags-emissary-quot-cpp"><a href="#tags-emissary-quot-cpp" class="headerlink" title="tags:  emissary&quot;.cpp"></a>tags:  <code>emissary&quot;.cpp</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/%22palace"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/00115">AGAR-king2.cpp</a></strong></em></p>
+<h6 id="tags-priority-queue"><a href="#tags-priority-queue" class="headerlink" title="tags:  priority_queue"></a>tags:  <code>priority_queue</code></h6><blockquote>
+<p>[time&#x3D;02,04,2022 Fri 14:32:20,17]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AGAR-king2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d010">AP325-d010.cpp</a></strong></em></p>
+<h6 id="tags-queue"><a href="#tags-queue" class="headerlink" title="tags:  queue"></a>tags:  <code>queue</code></h6><blockquote>
+<p>[time&#x3D;02,23,2022 Wed  8:48:27,43]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d010.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d011">AP325-d011.cpp</a></strong></em></p>
+<h6 id="tags-map"><a href="#tags-map" class="headerlink" title="tags:  map"></a>tags:  <code>map</code></h6><blockquote>
+<p>[time&#x3D;02,23,2022 Wed  8:38:30,63]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d011.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d012">AP325-d012.cpp</a></strong></em></p>
+<h6 id="tags-fast-power"><a href="#tags-fast-power" class="headerlink" title="tags:  fast-power"></a>tags:  <code>fast-power</code></h6><blockquote>
+<p>[time&#x3D;07,14,2022 Thu 22:28:10,35]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d012.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d013">AP325-d013.py</a></strong></em></p>
+<h6 id="tags-fast-power-1"><a href="#tags-fast-power-1" class="headerlink" title="tags:  fast-power"></a>tags:  <code>fast-power</code></h6><blockquote>
+<p>[time&#x3D;07,14,2022 Thu 23:03:13,67]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d013.py"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d014">AP325-d014.cpp</a></strong></em></p>
+<h6 id="tags-fib"><a href="#tags-fib" class="headerlink" title="tags:  fib"></a>tags:  <code>fib</code></h6><blockquote>
+<p>[time&#x3D;07,14,2022 Thu 23:08:52,03]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d014.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d015">AP325-d015.cpp</a></strong></em></p>
+<h6 id="tags-set"><a href="#tags-set" class="headerlink" title="tags:  set"></a>tags:  <code>set</code></h6><blockquote>
+<p>[time&#x3D;03,09,2022 Wed 10:23:30,20]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d015.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d019">AP325-d019.cpp</a></strong></em></p>
+<h6 id="tags-half-brute"><a href="#tags-half-brute" class="headerlink" title="tags:  half-brute"></a>tags:  <code>half-brute</code></h6><blockquote>
+<p>[time&#x3D;07,15,2022 Fri 19:13:53,14]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d019.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d020">AP325-d020.cpp</a></strong></em></p>
+<h6 id="tags-set-pref"><a href="#tags-set-pref" class="headerlink" title="tags:  set pref"></a>tags:  <code>set</code> <code>pref</code></h6><blockquote>
+<p>[time&#x3D;02,23,2022 Wed  9:43:33,87]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d020.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d021">AP325-d021.cpp</a></strong></em></p>
+<h6 id="tags-set-lower-bound-brute"><a href="#tags-set-lower-bound-brute" class="headerlink" title="tags:  set lower_bound brute"></a>tags:  <code>set</code> <code>lower_bound</code> <code>brute</code></h6><blockquote>
+<p>[time&#x3D;07,15,2022 Fri 22:50:36,14]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d021.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d022">AP325-d022.cpp</a></strong></em></p>
+<h6 id="tags-fast-power-operator"><a href="#tags-fast-power-operator" class="headerlink" title="tags:  fast-power operator"></a>tags:  <code>fast-power</code> <code>operator</code></h6><blockquote>
+<p>[time&#x3D;07,16,2022 Sat  7:49:57,14]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d022.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d028">AP325-d028.cpp</a></strong></em></p>
+<h6 id="tags-vector-stack"><a href="#tags-vector-stack" class="headerlink" title="tags:  vector stack"></a>tags:  <code>vector</code> <code>stack</code></h6><blockquote>
+<p>[time&#x3D;03,09,2022 Wed 10:38:12,01]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d028.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d029">AP325-d029.cpp</a></strong></em></p>
+<h6 id="tags-binary-search-deque-compare-operator-struct"><a href="#tags-binary-search-deque-compare-operator-struct" class="headerlink" title="tags:  binary_search deque compare operator struct"></a>tags:  <code>binary_search</code> <code>deque</code> <code>compare</code> <code>operator</code> <code>struct</code></h6><blockquote>
+<p>[time&#x3D;07,25,2022 Mon 17:19:30,64]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d029.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d031">AP325-d031.cpp</a></strong></em></p>
+<h6 id="tags-map-1"><a href="#tags-map-1" class="headerlink" title="tags:  map"></a>tags:  <code>map</code></h6><blockquote>
+<p>[time&#x3D;07,16,2022 Sat 14:55:13,37]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d031.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d032">AP325-d032.cpp</a></strong></em></p>
+<h6 id="tags-priority-queue-DP"><a href="#tags-priority-queue-DP" class="headerlink" title="tags:  priority_queue DP"></a>tags:  <code>priority_queue</code> <code>DP</code></h6><blockquote>
+<p>[time&#x3D;07,17,2022 Sun  8:07:47,65]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d032.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d033">AP325-d033.cpp</a></strong></em></p>
+<h6 id="tags-queue-sweep-line"><a href="#tags-queue-sweep-line" class="headerlink" title="tags:  queue sweep-line"></a>tags:  <code>queue</code> <code>sweep-line</code></h6><blockquote>
+<p>[time&#x3D;07,17,2022 Sun 11:39:24,14]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d033.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d034">AP325-d034.cpp</a></strong></em></p>
+<h6 id="tags-sweep-line-queue-map"><a href="#tags-sweep-line-queue-map" class="headerlink" title="tags:  sweep-line queue map"></a>tags:  <code>sweep-line</code> <code>queue</code> <code>map</code></h6><blockquote>
+<p>[time&#x3D;07,17,2022 Sun 12:49:37,14]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d034.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d035">AP325-d035.cpp</a></strong></em></p>
+<h6 id="tags-sweep-line"><a href="#tags-sweep-line" class="headerlink" title="tags:  sweep-line"></a>tags:  <code>sweep-line</code></h6><blockquote>
+<p>[time&#x3D;07,18,2022 Mon  7:04:23,14]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d035.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d036">AP325-d036-2.cpp</a></strong></em></p>
+<h6 id="tags-DC"><a href="#tags-DC" class="headerlink" title="tags:  DC"></a>tags:  <code>DC</code></h6><blockquote>
+<p>[time&#x3D;09,09,2022 Fri 12:42:08,53]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d036-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d036">AP325-d036-3.cpp</a></strong></em></p>
+<h6 id="tags-sweep-line-1"><a href="#tags-sweep-line-1" class="headerlink" title="tags:  sweep-line"></a>tags:  <code>sweep-line</code></h6><blockquote>
+<p>[time&#x3D;09,09,2022 Fri 14:26:04,52]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d036-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d037">AP325-d037.cpp</a></strong></em></p>
+<h6 id="tags-DP-priority-queue-sweep-line"><a href="#tags-DP-priority-queue-sweep-line" class="headerlink" title="tags:  DP priority_queue sweep-line"></a>tags:  <code>DP</code> <code>priority_queue</code> <code>sweep-line</code></h6><blockquote>
+<p>[time&#x3D;07,20,2022 Wed 19:09:21,45]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d037.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d038">AP325-d038.cpp</a></strong></em></p>
+<h6 id="tags-DC-1"><a href="#tags-DC-1" class="headerlink" title="tags:  DC"></a>tags:  <code>DC</code></h6><blockquote>
+<p>[time&#x3D;07,20,2022 Wed 19:43:31,70]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d038.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d043">AP325-d043.cpp</a></strong></em></p>
+<h6 id="tags-deque-greedy"><a href="#tags-deque-greedy" class="headerlink" title="tags:  deque greedy"></a>tags:  <code>deque</code> <code>greedy</code></h6><blockquote>
+<p>[time&#x3D;03,06,2022 Sun 12:16:13,33]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d043.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d045">AP325-d045.cpp</a></strong></em></p>
+<h6 id="tags-greedy"><a href="#tags-greedy" class="headerlink" title="tags:  greedy"></a>tags:  <code>greedy</code></h6><blockquote>
+<p>[time&#x3D;07,20,2022 Wed 20:44:54,04]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d045.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d046">AP325-d046.cpp</a></strong></em></p>
+<h6 id="tags-greedy-1"><a href="#tags-greedy-1" class="headerlink" title="tags:  greedy"></a>tags:  <code>greedy</code></h6><blockquote>
+<p>[time&#x3D;07,21,2022 Thu 19:55:59,76]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d046.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d049">AP325-d049.cpp</a></strong></em></p>
+<h6 id="tags-greedy-binary-search"><a href="#tags-greedy-binary-search" class="headerlink" title="tags:  greedy binary_search"></a>tags:  <code>greedy</code> <code>binary_search</code></h6><blockquote>
+<p>[time&#x3D;07,21,2022 Thu 21:44:18,73]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d049.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d050">AP325-d050.cpp</a></strong></em></p>
+<h6 id="tags-sweep-line-struct"><a href="#tags-sweep-line-struct" class="headerlink" title="tags:  sweep-line struct"></a>tags:  <code>sweep-line</code> <code>struct</code></h6><blockquote>
+<p>[time&#x3D;03,11,2022 Fri  7:44:40,26]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d050.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d051">AP325-d051.py</a></strong></em></p>
+<h6 id="tags-greedy-DP"><a href="#tags-greedy-DP" class="headerlink" title="tags:  greedy DP"></a>tags:  <code>greedy</code> <code>DP</code></h6><blockquote>
+<p>[time&#x3D;07,22,2022 Fri  6:19:41,82]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d051.py"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d052">AP325-d052-2.cpp</a></strong></em></p>
+<h6 id="tags-DC-2"><a href="#tags-DC-2" class="headerlink" title="tags:  DC"></a>tags:  <code>DC</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d052-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d053">AP325-d053.cpp</a></strong></em></p>
+<h6 id="tags-greedy-priority-queue"><a href="#tags-greedy-priority-queue" class="headerlink" title="tags:  greedy priority_queue"></a>tags:  <code>greedy</code> <code>priority_queue</code></h6><blockquote>
+<p>[time&#x3D;07,29,2022 Fri 16:07:36,85]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d053.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d054">AP325-d054-2.cpp</a></strong></em></p>
+<h6 id="tags-binary-search"><a href="#tags-binary-search" class="headerlink" title="tags:  binary_search"></a>tags:  <code>binary_search</code></h6><blockquote>
+<p>[time&#x3D;07,30,2022 Sat 14:19:18,52]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d054-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d055">AP325-d055-2.cpp</a></strong></em></p>
+<h6 id="tags-re-sweep-line"><a href="#tags-re-sweep-line" class="headerlink" title="tags:  re sweep-line"></a>tags:  <code>re</code> <code>sweep-line</code></h6><blockquote>
+<p>[time&#x3D;09,10,2022 Sat 14:52:31,15]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d055-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d055">AP325-d055.cpp</a></strong></em></p>
+<h6 id="tags-sweep-line-greedy"><a href="#tags-sweep-line-greedy" class="headerlink" title="tags:  sweep-line greedy"></a>tags:  <code>sweep-line</code> <code>greedy</code></h6><blockquote>
+<p>[time&#x3D;08,03,2022 Wed 10:06:43,14]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d055.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d057">AP325-d057.cpp</a></strong></em></p>
+<h6 id="tags-greedy-2"><a href="#tags-greedy-2" class="headerlink" title="tags:  greedy"></a>tags:  <code>greedy</code></h6><blockquote>
+<p>[time&#x3D;07,24,2022 Sun 15:30:58,68]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d057.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d059">AP325-d059.cpp</a></strong></em></p>
+<h6 id="tags-binary-search-lower-bound"><a href="#tags-binary-search-lower-bound" class="headerlink" title="tags:  binary_search lower_bound"></a>tags:  <code>binary_search</code> <code>lower_bound</code></h6><blockquote>
+<p>[time&#x3D;07,29,2022 Fri 22:34:36,50]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d059.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d060">AP325-d060.cpp</a></strong></em></p>
+<h6 id="tags-priority-queue-1"><a href="#tags-priority-queue-1" class="headerlink" title="tags:  priority_queue"></a>tags:  <code>priority_queue</code></h6><blockquote>
+<p>[time&#x3D;07,24,2022 Sun 18:46:07,88]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d060.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d061">AP325-d061.cpp</a></strong></em></p>
+<h6 id="tags-greedy-sweep-line"><a href="#tags-greedy-sweep-line" class="headerlink" title="tags:  greedy sweep-line"></a>tags:  <code>greedy</code> <code>sweep-line</code></h6><blockquote>
+<p>[time&#x3D;07,25,2022 Mon 17:00:30,85]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d061.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d064">AP325-d064-3.cpp</a></strong></em></p>
+<h6 id="tags-pb-ds-tree"><a href="#tags-pb-ds-tree" class="headerlink" title="tags:  pb_ds tree"></a>tags:  <code>pb_ds</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;08,17,2022 Wed 21:36:49,09]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d064-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d064">AP325-d064-4.cpp</a></strong></em></p>
+<h6 id="tags-BIT-tree"><a href="#tags-BIT-tree" class="headerlink" title="tags:  BIT tree"></a>tags:  <code>BIT</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;08,17,2022 Wed 21:46:43,85]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d064-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d064">AP325-d064-5.cpp</a></strong></em></p>
+<h6 id="tags-tree-BIT"><a href="#tags-tree-BIT" class="headerlink" title="tags:  tree BIT"></a>tags:  <code>tree</code> <code>BIT</code></h6><blockquote>
+<p>[time&#x3D;08,17,2022 Wed 22:00:02,29]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d064-5.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d065">AP325-d065.cpp</a></strong></em></p>
+<h6 id="tags-DC-3"><a href="#tags-DC-3" class="headerlink" title="tags:  DC"></a>tags:  <code>DC</code></h6><blockquote>
+<p>[time&#x3D;07,29,2022 Fri 19:03:40,55]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d065.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d066">AP325-d066.cpp</a></strong></em></p>
+<h6 id="tags-DP"><a href="#tags-DP" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;03,11,2022 Fri  9:24:35,97]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d066.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d067">AP325-d067.cpp</a></strong></em></p>
+<h6 id="tags-DP-1"><a href="#tags-DP-1" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;03,11,2022 Fri 10:19:19,44]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d067.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d069">AP325-d069.cpp</a></strong></em></p>
+<h6 id="tags-DP-2"><a href="#tags-DP-2" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;04,22,2022 Fri 20:33:58,38]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d069.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d070">AP325-d070.cpp</a></strong></em></p>
+<h6 id="tags-DP-3"><a href="#tags-DP-3" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;04,22,2022 Fri 20:49:33,56]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d070.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d071">AP325-d071.cpp</a></strong></em></p>
+<h6 id="tags-DP-4"><a href="#tags-DP-4" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;04,22,2022 Fri 21:25:52,94]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d071.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d072">AP325-d072-2.cpp</a></strong></em></p>
+<h6 id="tags-DP-5"><a href="#tags-DP-5" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;05,06,2022 Fri 11:14:37,63]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d072-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d073">AP325-d073.cpp</a></strong></em></p>
+<h6 id="tags-DP-brute"><a href="#tags-DP-brute" class="headerlink" title="tags:  DP brute"></a>tags:  <code>DP</code> <code>brute</code></h6><blockquote>
+<p>[time&#x3D;07,24,2022 Sun 15:13:52,17]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d073.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d075">AP325-d075.cpp</a></strong></em></p>
+<h6 id="tags-DP-6"><a href="#tags-DP-6" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;07,26,2022 Tue 13:54:21,92]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d075.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d076">AP325-d076.cpp</a></strong></em></p>
+<h6 id="tags-DP-7"><a href="#tags-DP-7" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;04,22,2022 Fri 21:41:23,21]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d076.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d076">AP325-d076.py</a></strong></em></p>
+<h6 id="tags-DP-8"><a href="#tags-DP-8" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;04,22,2022 Fri 21:51:48,00]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d076.py"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d077">AP325-d077-3.cpp</a></strong></em></p>
+<h6 id="tags-DP-priority-queue"><a href="#tags-DP-priority-queue" class="headerlink" title="tags:  DP priority_queue"></a>tags:  <code>DP</code> <code>priority_queue</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d077-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d077">AP325-d077-4.cpp</a></strong></em></p>
+<h6 id="tags-DP-deque"><a href="#tags-DP-deque" class="headerlink" title="tags:  DP deque"></a>tags:  <code>DP</code> <code>deque</code></h6><blockquote>
+<p>[time&#x3D;04,29,2022 Fri 14:15:23,88]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d077-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d078">AP325-d078.cpp</a></strong></em></p>
+<h6 id="tags-DP-vector"><a href="#tags-DP-vector" class="headerlink" title="tags:  DP vector"></a>tags:  <code>DP</code> <code>vector</code></h6><blockquote>
+<p>[time&#x3D;04,29,2022 Fri 10:15:44,93]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d078.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d079">AP325-d079-2.cpp</a></strong></em></p>
+<h6 id="tags-DP-9"><a href="#tags-DP-9" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;05,21,2022 Sat 17:23:38,31]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d079-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d079">AP325-d079-3.cpp</a></strong></em></p>
+<h6 id="tags-DP-re"><a href="#tags-DP-re" class="headerlink" title="tags:  DP re"></a>tags:  <code>DP</code> <code>re</code></h6><blockquote>
+<p>[time&#x3D;06,09,2022 Thu 21:24:21,97]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d079-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d080">AP325-d080.cpp</a></strong></em></p>
+<h6 id="tags-DP-eg"><a href="#tags-DP-eg" class="headerlink" title="tags:  DP eg."></a>tags:  <code>DP</code> <code>eg.</code></h6><blockquote>
+<p>[time&#x3D;05,23,2022 Mon  8:14:30,36]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d080.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d086">AP325-d086-2.cpp</a></strong></em></p>
+<h6 id="tags-DP-10"><a href="#tags-DP-10" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;07,21,2022 Thu 16:31:59,32]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d086-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d086">AP325-d086.cpp</a></strong></em></p>
+<h6 id="tags-DP-11"><a href="#tags-DP-11" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;07,21,2022 Thu  8:49:51,74]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d086.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d091">AP325-d091.cpp</a></strong></em></p>
+<h6 id="tags-DSU-graph"><a href="#tags-DSU-graph" class="headerlink" title="tags:  DSU graph"></a>tags:  <code>DSU</code> <code>graph</code></h6><blockquote>
+<p>[time&#x3D;07,28,2022 Thu 14:55:22,07]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d091.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d095">AP325-d095.cpp</a></strong></em></p>
+<h6 id="tags-DP-graph"><a href="#tags-DP-graph" class="headerlink" title="tags:  DP graph"></a>tags:  <code>DP</code> <code>graph</code></h6><blockquote>
+<p>[time&#x3D;04,15,2022 Fri 10:12:41,37]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d095.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d100">AP325-d100.cpp</a></strong></em></p>
+<h6 id="tags-graph-DSU"><a href="#tags-graph-DSU" class="headerlink" title="tags:  graph DSU"></a>tags:  <code>graph</code> <code>DSU</code></h6><blockquote>
+<p>[time&#x3D;10,05,2022 Wed 11:41:47,20]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d100.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d102">AP325-d102.cpp</a></strong></em></p>
+<h6 id="tags-graph-DFS-DSU-struct-operator"><a href="#tags-graph-DFS-DSU-struct-operator" class="headerlink" title="tags:  graph DFS DSU struct operator"></a>tags:  <code>graph</code> <code>DFS</code> <code>DSU</code> <code>struct</code> <code>operator</code></h6><blockquote>
+<p>[time&#x3D;09,16,2022 Fri 20:49:09,28]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d102.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-10503-3.cpp</strong></em></p>
+<h6 id="tags-struct"><a href="#tags-struct" class="headerlink" title="tags:  struct"></a>tags:  <code>struct</code></h6><blockquote>
+<p>[time&#x3D;04,29,2022 Fri 21:21:49,72]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-10503-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-10503-4.cpp</strong></em></p>
+<h6 id="tags-DP-tree"><a href="#tags-DP-tree" class="headerlink" title="tags:  DP tree"></a>tags:  <code>DP</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;04,29,2022 Fri 21:49:04,42]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-10503-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-10610-3.cpp</strong></em></p>
+<h6 id="tags-DP-tree-1"><a href="#tags-DP-tree-1" class="headerlink" title="tags:  DP tree"></a>tags:  <code>DP</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;05,01,2022 Sun 16:30:04,99]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-10610-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-10610-4.cpp</strong></em></p>
+<h6 id="tags-compare"><a href="#tags-compare" class="headerlink" title="tags:  compare"></a>tags:  <code>compare</code></h6><blockquote>
+<p>[time&#x3D;05,07,2022 Sat 12:55:43,76]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-10610-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-10901-03.cpp</strong></em></p>
+<h6 id="tags-list"><a href="#tags-list" class="headerlink" title="tags:  list"></a>tags:  <code>list</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-10901-03.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-10907-3.cpp</strong></em></p>
+<h6 id="tags-binary-search-1"><a href="#tags-binary-search-1" class="headerlink" title="tags:  binary_search"></a>tags:  <code>binary_search</code></h6><blockquote>
+<p>[time&#x3D;05,21,2022 Sat 16:20:49,80]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-10907-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-11001-3.cpp</strong></em></p>
+<h6 id="tags-set-1"><a href="#tags-set-1" class="headerlink" title="tags:  set"></a>tags:  <code>set</code></h6><blockquote>
+<p>[time&#x3D;05,21,2022 Sat 21:19:53,85]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-11001-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-11001-4.cpp</strong></em></p>
+<h6 id="tags-DP-12"><a href="#tags-DP-12" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;05,22,2022 Sun 10:58:32,17]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-11001-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-11101-03-2.cpp</strong></em></p>
+<h6 id="tags-set-hash-unordered-set"><a href="#tags-set-hash-unordered-set" class="headerlink" title="tags:  set hash unordered_set"></a>tags:  <code>set</code> <code>hash</code> <code>unordered_set</code></h6><blockquote>
+<p>[time&#x3D;03,05,2022 Sat 20:16:46,14]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-11101-03-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-11101-03.cpp</strong></em></p>
+<h6 id="tags-search"><a href="#tags-search" class="headerlink" title="tags:  search"></a>tags:  <code>search</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-11101-03.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-11106-3-3.cpp</strong></em></p>
+<h6 id="tags-binary-search-2"><a href="#tags-binary-search-2" class="headerlink" title="tags:  binary_search"></a>tags:  <code>binary_search</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-11106-3-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-11106-4-2.cpp</strong></em></p>
+<h6 id="tags-DP-13"><a href="#tags-DP-13" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,14,2022 Tue  8:26:42,81]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-11106-4-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-11106-4-3.cpp</strong></em></p>
+<h6 id="tags-DP-14"><a href="#tags-DP-14" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,14,2022 Tue  9:00:43,91]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-11106-4-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-11106-4.cpp</strong></em></p>
+<h6 id="tags-DP-15"><a href="#tags-DP-15" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,13,2022 Mon 11:22:31,16]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-11106-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-11110-4-2.cpp</strong></em></p>
+<h6 id="tags-BFS-DP"><a href="#tags-BFS-DP" class="headerlink" title="tags:  BFS DP"></a>tags:  <code>BFS</code> <code>DP</code></h6><blockquote>
+<p>[time&#x3D;10,24,2022 Mon 10:21:27,02]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-11110-4-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>APCS-11110-4-3.cpp</strong></em></p>
+<h6 id="tags-BFS-binary-search-DSU"><a href="#tags-BFS-binary-search-DSU" class="headerlink" title="tags:  BFS binary_search DSU"></a>tags:  <code>BFS</code> <code>binary_search</code> <code>DSU</code></h6><blockquote>
+<p>[time&#x3D;10,24,2022 Mon 10:21:43,37]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCS-11110-4-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://apcsclass.csie.ntnu.edu.tw/ShowProblem?problemid=a137">APCSP-a137-2.cpp</a></strong></em></p>
+<h6 id="tags-DSU-MST"><a href="#tags-DSU-MST" class="headerlink" title="tags:  DSU MST"></a>tags:  <code>DSU</code> <code>MST</code></h6><blockquote>
+<p>[time&#x3D;12,08,2022 Thu  9:39:23,26]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/APCSP-a137-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1142/">Advertisement-2.cpp</a></strong></em></p>
+<h6 id="tags-DC-4"><a href="#tags-DC-4" class="headerlink" title="tags:  DC"></a>tags:  <code>DC</code></h6><blockquote>
+<p>[time&#x3D;10,27,2022 Thu 18:25:06,75]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Advertisement-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1635/problem/B">Avoid-Local-Maximums.cpp</a></strong></em></p>
+<h6 id="tags-contest"><a href="#tags-contest" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,20,2022 Sun 22:51:17,00]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Avoid-Local-Maximums.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1666">Building-Roads.cpp</a></strong></em></p>
+<h6 id="tags-graph"><a href="#tags-graph" class="headerlink" title="tags:  graph"></a>tags:  <code>graph</code></h6><blockquote>
+<p>[time&#x3D;08,13,2022 Sat  7:44:15,40]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Building-Roads.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/938/D">Buy-a-Ticket.cpp</a></strong></em></p>
+<h6 id="tags-graph-1"><a href="#tags-graph-1" class="headerlink" title="tags:  graph"></a>tags:  <code>graph</code></h6><blockquote>
+<p>[time&#x3D;08,24,2022 Wed 17:39:53,03]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Buy-a-Ticket.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1636">Coin-Combinations-II.cpp</a></strong></em></p>
+<h6 id="tags-DP-16"><a href="#tags-DP-16" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;07,30,2022 Sat 18:58:36,53]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Coin-Combinations-II.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/G">Colten’s-math-problem.cpp</a></strong></em></p>
+<h6 id="tags-contest-1"><a href="#tags-contest-1" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,13,2022 Sun 15:19:55,74]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Colten's-math-problem.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/I">Colten-work-in-THSR.cpp</a></strong></em></p>
+<h6 id="tags-contest-2"><a href="#tags-contest-2" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,13,2022 Sun 16:03:37,98]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Colten-work-in-THSR.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1687">Company-Queries-I.cpp</a></strong></em></p>
+<h6 id="tags-tree"><a href="#tags-tree" class="headerlink" title="tags:  tree"></a>tags:  <code>tree</code></h6><blockquote>
+<p>[time&#x3D;11,04,2022 Fri 14:03:57,46]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Company-Queries-I.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1688">Company-Queries-II.cpp</a></strong></em></p>
+<h6 id="tags-LCA-tree"><a href="#tags-LCA-tree" class="headerlink" title="tags:  LCA tree"></a>tags:  <code>LCA</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;11,04,2022 Fri 14:19:29,34]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Company-Queries-II.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1750/D">Count-GCD.cpp</a></strong></em></p>
+<h6 id="tags-math"><a href="#tags-math" class="headerlink" title="tags:  math"></a>tags:  <code>math</code></h6><blockquote>
+<p>[time&#x3D;11,22,2022 Tue 11:17:46,40]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Count-GCD.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1136">Counting-Paths.cpp</a></strong></em></p>
+<h6 id="tags-tree-LCA-difference"><a href="#tags-tree-LCA-difference" class="headerlink" title="tags:  tree LCA difference"></a>tags:  <code>tree</code> <code>LCA</code> <code>difference</code></h6><blockquote>
+<p>[time&#x3D;11,04,2022 Fri 14:46:42,16]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Counting-Paths.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1192">Counting-Rooms.cpp</a></strong></em></p>
+<h6 id="tags-DFS"><a href="#tags-DFS" class="headerlink" title="tags:  DFS"></a>tags:  <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;07,31,2022 Sun 16:42:02,67]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Counting-Rooms.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1679">Course-Schedule.cpp</a></strong></em></p>
+<h6 id="tags-tapo-graph"><a href="#tags-tapo-graph" class="headerlink" title="tags:  tapo graph"></a>tags:  <code>tapo</code> <code>graph</code></h6><blockquote>
+<p>[time&#x3D;10,11,2022 Tue 11:29:32,42]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Course-Schedule.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://192.168.193.20/contest/2/problem/038">Cut.cpp</a></strong></em></p>
+<h6 id="tags-DP-17"><a href="#tags-DP-17" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,06,2022 Mon 10:54:01,62]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Cut.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1135">Distance-Queries-2.cpp</a></strong></em></p>
+<h6 id="tags-tree-LCA"><a href="#tags-tree-LCA" class="headerlink" title="tags:  tree LCA"></a>tags:  <code>tree</code> <code>LCA</code></h6><blockquote>
+<p>[time&#x3D;11,04,2022 Fri 14:31:53,59]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Distance-Queries-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1734">Distinct-Values-Queries.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-offline"><a href="#tags-seg-tree-offline" class="headerlink" title="tags:  seg_tree offline"></a>tags:  <code>seg_tree</code> <code>offline</code></h6><blockquote>
+<p>[time&#x3D;11,22,2022 Tue 23:34:15,03]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Distinct-Values-Queries.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1764/problem/D">Doremy’s-Pegging-Game.cpp</a></strong></em></p>
+<h6 id="tags-math-1"><a href="#tags-math-1" class="headerlink" title="tags:  math"></a>tags:  <code>math</code></h6><blockquote>
+<p>[time&#x3D;11,28,2022 Mon 21:12:09,57]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Doremy's-Pegging-Game.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://choj.me/problem/c001">EIKO’s-concert.cpp</a></strong></em></p>
+<h6 id="tags-choj-chsh-exam"><a href="#tags-choj-chsh-exam" class="headerlink" title="tags:  choj chsh-exam"></a>tags:  <code>choj</code> <code>chsh-exam</code></h6><blockquote>
+<p>[time&#x3D;07,01,2022 Fri  6:28:45,19]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/EIKO's-concert.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1195">Flight-Discount.cpp</a></strong></em></p>
+<h6 id="tags-graph-dijkstra"><a href="#tags-graph-dijkstra" class="headerlink" title="tags:  graph dijkstra"></a>tags:  <code>graph</code> <code>dijkstra</code></h6><blockquote>
+<p>[time&#x3D;08,30,2022 Tue 13:34:45,07]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Flight-Discount.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_q">Flowers-2.cpp</a></strong></em></p>
+<h6 id="tags-DP-BIT"><a href="#tags-DP-BIT" class="headerlink" title="tags:  DP BIT"></a>tags:  <code>DP</code> <code>BIT</code></h6><blockquote>
+<p>[time&#x3D;09,14,2022 Wed  8:39:04,05]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Flowers-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_q">Flowers.cpp</a></strong></em></p>
+<h6 id="tags-DP-18"><a href="#tags-DP-18" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;09,14,2022 Wed  8:27:04,81]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Flowers.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1652">Forest-Queries.cpp</a></strong></em></p>
+<h6 id="tags-DP-19"><a href="#tags-DP-19" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;11,29,2022 Tue 16:56:30,75]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Forest-Queries.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>Fortune-Telling.cpp</strong></em></p>
+<h6 id="tags-contest-3"><a href="#tags-contest-3" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,07,2022 Mon 10:16:46,86]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Fortune-Telling.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1144/problem/F">Graph-Without-Long-Directed-Paths.cpp</a></strong></em></p>
+<h6 id="tags-DSU-graph-DFS"><a href="#tags-DSU-graph-DFS" class="headerlink" title="tags:  DSU graph DFS"></a>tags:  <code>DSU</code> <code>graph</code> <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;10,12,2022 Wed 14:01:07,26]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Graph-Without-Long-Directed-Paths.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1638">Grid-Paths.cpp</a></strong></em></p>
+<h6 id="tags-DP-20"><a href="#tags-DP-20" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;08,25,2022 Thu 17:23:21,41]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Grid-Paths.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1673">High-Score-5.cpp</a></strong></em></p>
+<h6 id="tags-graph-DFS"><a href="#tags-graph-DFS" class="headerlink" title="tags:  graph DFS"></a>tags:  <code>graph</code> <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;10,10,2022 Mon  8:29:12,95]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/High-Score-5.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://www.usaco.org/index.php?page=viewproblem2">Hoof-Paper-Scissors.cpp</a></strong></em></p>
+<h6 id="tags-DP-21"><a href="#tags-DP-21" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;10,22,2022 Sat 17:14:51,38]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Hoof-Paper-Scissors.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1143">Hotel-Queries.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-binary-search"><a href="#tags-seg-tree-binary-search" class="headerlink" title="tags:  seg_tree binary_search"></a>tags:  <code>seg_tree</code> <code>binary_search</code></h6><blockquote>
+<p>[time&#x3D;11,29,2022 Tue 17:06:04,60]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Hotel-Queries.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1993">K’s-farm.cpp</a></strong></em></p>
+<h6 id="tags-graph-difference"><a href="#tags-graph-difference" class="headerlink" title="tags:  graph difference"></a>tags:  <code>graph</code> <code>difference</code></h6><blockquote>
+<p>[time&#x3D;10,18,2022 Tue 16:24:07,31]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/K's-farm.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_d">Knapsack1.cpp</a></strong></em></p>
+<h6 id="tags-DP-22"><a href="#tags-DP-22" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,02,2022 Thu  9:11:13,58]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Knapsack1.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3379">LCA.cpp</a></strong></em></p>
+<h6 id="tags-gp-hash-table-tree-LCA-sparse-table-BFS-DFS"><a href="#tags-gp-hash-table-tree-LCA-sparse-table-BFS-DFS" class="headerlink" title="tags:  gp_hash_table tree LCA sparse_table BFS DFS"></a>tags:  <code>gp_hash_table</code> <code>tree</code> <code>LCA</code> <code>sparse_table</code> <code>BFS</code> <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;10,15,2022 Sat  8:08:49,90]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/LCA.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1193">Labyrinth.cpp</a></strong></em></p>
+<h6 id="tags-BFS-re-search"><a href="#tags-BFS-re-search" class="headerlink" title="tags:  BFS re-search"></a>tags:  <code>BFS</code> <code>re-search</code></h6><blockquote>
+<p>[time&#x3D;08,09,2022 Tue 15:34:23,14]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Labyrinth.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1680/">Longest-Flight-Route-2.cpp</a></strong></em></p>
+<h6 id="tags-graph-re-search-tapo-DAG"><a href="#tags-graph-re-search-tapo-DAG" class="headerlink" title="tags:  graph re-search tapo DAG"></a>tags:  <code>graph</code> <code>re-search</code> <code>tapo</code> <code>DAG</code></h6><blockquote>
+<p>[time&#x3D;10,12,2022 Wed 11:21:18,29]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Longest-Flight-Route-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/888/problem/E">Maximum-Subsequence-2.cpp</a></strong></em></p>
+<h6 id="tags-half-brute-1"><a href="#tags-half-brute-1" class="headerlink" title="tags:  half-brute"></a>tags:  <code>half-brute</code></h6><blockquote>
+<p>[time&#x3D;12,07,2022 Wed 21:07:56,37]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Maximum-Subsequence-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1667">Message-Route.cpp</a></strong></em></p>
+<h6 id="tags-BFS-re-search-1"><a href="#tags-BFS-re-search-1" class="headerlink" title="tags:  BFS re-search"></a>tags:  <code>BFS</code> <code>re-search</code></h6><blockquote>
+<p>[time&#x3D;08,13,2022 Sat 10:08:29,02]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Message-Route.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>Middle-Letter.py</strong></em></p>
+<h6 id="tags-contest-4"><a href="#tags-contest-4" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;08,27,2022 Sat 20:48:38,10]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Middle-Letter.py"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>Modulo-Number.py</strong></em></p>
+<h6 id="tags-contest-5"><a href="#tags-contest-5" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;08,27,2022 Sat 20:51:43,18]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Modulo-Number.py"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1194">Monsters.cpp</a></strong></em></p>
+<h6 id="tags-BFS"><a href="#tags-BFS" class="headerlink" title="tags:  BFS"></a>tags:  <code>BFS</code></h6><blockquote>
+<p>[time&#x3D;08,16,2022 Tue  8:08:02,33]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Monsters.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1027/problem/D">Mouse-Hunt.cpp</a></strong></em></p>
+<h6 id="tags-DFS-1"><a href="#tags-DFS-1" class="headerlink" title="tags:  DFS"></a>tags:  <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;12,07,2022 Wed 11:45:56,90]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Mouse-Hunt.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1741/problem/F">Multi-Colored-Segments.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-offline-1"><a href="#tags-seg-tree-offline-1" class="headerlink" title="tags:  seg_tree offline"></a>tags:  <code>seg_tree</code> <code>offline</code></h6><blockquote>
+<p>[time&#x3D;12,03,2022 Sat 20:17:16,52]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Multi-Colored-Segments.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1645/">Nearest-Smaller-Values.cpp</a></strong></em></p>
+<h6 id="tags-priority-queue-2"><a href="#tags-priority-queue-2" class="headerlink" title="tags:  priority_queue"></a>tags:  <code>priority_queue</code></h6><blockquote>
+<p>[time&#x3D;05,31,2022 Tue 21:55:19,94]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Nearest-Smaller-Values.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/B">Number-compare.cpp</a></strong></em></p>
+<h6 id="tags-contest-6"><a href="#tags-contest-6" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,13,2022 Sun 14:10:10,21]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Number-compare.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/D">Perfect-take.cpp</a></strong></em></p>
+<h6 id="tags-contest-7"><a href="#tags-contest-7" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,14,2022 Mon 13:00:20,28]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Perfect-take.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1696/problem/D">Permutation-Graph-2.cpp</a></strong></em></p>
+<h6 id="tags-greedy-3"><a href="#tags-greedy-3" class="headerlink" title="tags:  greedy"></a>tags:  <code>greedy</code></h6><blockquote>
+<p>[time&#x3D;12,09,2022 Fri  9:13:44,31]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Permutation-Graph-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/C">Power-of-art.cpp</a></strong></em></p>
+<h6 id="tags-contest-8"><a href="#tags-contest-8" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,13,2022 Sun 14:21:09,42]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Power-of-art.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/2166">Prefix-Sum-Queries-2.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree"><a href="#tags-seg-tree" class="headerlink" title="tags:  seg_tree"></a>tags:  <code>seg_tree</code></h6><blockquote>
+<p>[time&#x3D;08,19,2022 Fri 21:39:25,22]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Prefix-Sum-Queries-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/2166/">Prefix-Sum-Queries-3.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-1"><a href="#tags-seg-tree-1" class="headerlink" title="tags:  seg_tree"></a>tags:  <code>seg_tree</code></h6><blockquote>
+<p>[time&#x3D;08,19,2022 Fri 22:29:12,06]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Prefix-Sum-Queries-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/245/problem/H">Queries-for-Number-of-Palindromes.cpp</a></strong></em></p>
+<h6 id="tags-DP-23"><a href="#tags-DP-23" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;12,09,2022 Fri 14:24:25,70]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Queries-for-Number-of-Palindromes.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1760/problem/F">Quests.cpp</a></strong></em></p>
+<h6 id="tags-binary-search-3"><a href="#tags-binary-search-3" class="headerlink" title="tags:  binary-search"></a>tags:  <code>binary-search</code></h6><blockquote>
+<p>[time&#x3D;11,22,2022 Tue 10:12:46,19]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Quests.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/hack/1651/list/">Range-Update-Queries-2.cpp</a></strong></em></p>
+<h6 id="tags-BIT-tree-1"><a href="#tags-BIT-tree-1" class="headerlink" title="tags:  BIT tree"></a>tags:  <code>BIT</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;08,18,2022 Thu 20:50:48,09]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Range-Update-Queries-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/hack/1651/list/">Range-Update-Queries.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-lazy-tag-tree"><a href="#tags-seg-tree-lazy-tag-tree" class="headerlink" title="tags:  seg_tree lazy_tag tree"></a>tags:  <code>seg_tree</code> <code>lazy_tag</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;08,18,2022 Thu 20:49:48,17]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Range-Update-Queries.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/result/4647467/">Range-Xor-Queries-2.cpp</a></strong></em></p>
+<h6 id="tags-pref"><a href="#tags-pref" class="headerlink" title="tags:  pref"></a>tags:  <code>pref</code></h6><blockquote>
+<p>[time&#x3D;09,18,2022 Sun  9:20:33,41]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Range-Xor-Queries-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1650">Range-Xor-Queries.cpp</a></strong></em></p>
+<h6 id="tags-BIT"><a href="#tags-BIT" class="headerlink" title="tags:  BIT"></a>tags:  <code>BIT</code></h6><blockquote>
+<p>[time&#x3D;09,18,2022 Sun  9:12:35,91]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Range-Xor-Queries.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1759/G">Restore-the-Permutation.cpp</a></strong></em></p>
+<h6 id="tags-greedy-4"><a href="#tags-greedy-4" class="headerlink" title="tags:  greedy"></a>tags:  <code>greedy</code></h6><blockquote>
+<p>[time&#x3D;12,07,2022 Wed 16:15:54,37]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Restore-the-Permutation.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1634/problem/A">Reverse-and-Concatenate.cpp</a></strong></em></p>
+<h6 id="tags-abba-contest"><a href="#tags-abba-contest" class="headerlink" title="tags:  abba contest"></a>tags:  <code>abba</code> <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,06,2022 Sun 22:41:13,04]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Reverse-and-Concatenate.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1678">Round-Trip-II.cpp</a></strong></em></p>
+<h6 id="tags-graph-DFS-1"><a href="#tags-graph-DFS-1" class="headerlink" title="tags:  graph DFS"></a>tags:  <code>graph</code> <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;10,11,2022 Tue  9:20:43,99]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Round-Trip-II.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1669">Round-Trip.cpp</a></strong></em></p>
+<h6 id="tags-DFS-2"><a href="#tags-DFS-2" class="headerlink" title="tags:  DFS"></a>tags:  <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;08,15,2022 Mon 12:59:35,46]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Round-Trip.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1144">Salary-Queries-3.cpp</a></strong></em></p>
+<h6 id="tags-BIT-tree-template"><a href="#tags-BIT-tree-template" class="headerlink" title="tags:  BIT tree template"></a>tags:  <code>BIT</code> <code>tree</code> <code>template</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Salary-Queries-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1144">Salary-Queries-4.cpp</a></strong></em></p>
+<h6 id="tags-pb-ds-re"><a href="#tags-pb-ds-re" class="headerlink" title="tags:  pb_ds re"></a>tags:  <code>pb_ds</code> <code>re</code></h6><blockquote>
+<p>[time&#x3D;09,18,2022 Sun  9:47:00,79]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Salary-Queries-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1144/">Salary-Queries.cpp</a></strong></em></p>
+<h6 id="tags-pb-ds-tree-1"><a href="#tags-pb-ds-tree-1" class="headerlink" title="tags:  pb_ds tree"></a>tags:  <code>pb_ds</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;08,17,2022 Wed  8:06:09,42]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Salary-Queries.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1743/problem/C">Save-the-Magazines.cpp</a></strong></em></p>
+<h6 id="tags-DP-24"><a href="#tags-DP-24" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;11,20,2022 Sun  7:23:30,61]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Save-the-Magazines.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1753">String-Matching.cpp</a></strong></em></p>
+<h6 id="tags-KMP"><a href="#tags-KMP" class="headerlink" title="tags:  KMP"></a>tags:  <code>KMP</code></h6><blockquote>
+<p>[time&#x3D;07,31,2022 Sun  9:25:04,48]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/String-Matching.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1660">Subarray-Sums-I.cpp</a></strong></em></p>
+<h6 id="tags-DP-map"><a href="#tags-DP-map" class="headerlink" title="tags:  DP map"></a>tags:  <code>DP</code> <code>map</code></h6><blockquote>
+<p>[time&#x3D;07,31,2022 Sun 17:01:02,72]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Subarray-Sums-I.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1674">Subordinates.cpp</a></strong></em></p>
+<h6 id="tags-DFS-3"><a href="#tags-DFS-3" class="headerlink" title="tags:  DFS"></a>tags:  <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;09,21,2022 Wed 15:41:09,21]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Subordinates.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1137">Subtree-Queries-2.cpp</a></strong></em></p>
+<h6 id="tags-BIT-tree-DFS"><a href="#tags-BIT-tree-DFS" class="headerlink" title="tags:  BIT tree DFS"></a>tags:  <code>BIT</code> <code>tree</code> <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;11,04,2022 Fri 15:48:09,91]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Subtree-Queries-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/1175">TIOJ-1175.cpp</a></strong></em></p>
+<h6 id="tags-DP-25"><a href="#tags-DP-25" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;12,07,2022 Wed 11:27:02,80]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/TIOJ-1175.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/1209">TIOJ-1209.cpp</a></strong></em></p>
+<h6 id="tags-bigraph-graph-DFS"><a href="#tags-bigraph-graph-DFS" class="headerlink" title="tags:  bigraph graph DFS"></a>tags:  <code>bigraph</code> <code>graph</code> <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;10,27,2022 Thu  7:53:48,38]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/TIOJ-1209.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/2252">TIOJ-2252-2.cpp</a></strong></em></p>
+<h6 id="tags-geometry"><a href="#tags-geometry" class="headerlink" title="tags:  geometry"></a>tags:  <code>geometry</code></h6><blockquote>
+<p>[time&#x3D;11,25,2022 Fri  9:20:00,81]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/TIOJ-2252-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/2254">TIOJ-2254.cpp</a></strong></em></p>
+<h6 id="tags-graph-tapoo-binary-search"><a href="#tags-graph-tapoo-binary-search" class="headerlink" title="tags:  graph tapoo binary_search"></a>tags:  <code>graph</code> <code>tapoo</code> <code>binary_search</code></h6><blockquote>
+<p>[time&#x3D;11,25,2022 Fri 15:34:18,38]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/TIOJ-2254.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/2257">TIOJ-2257.cpp</a></strong></em></p>
+<h6 id="tags-BIT-graph-DFS-tree"><a href="#tags-BIT-graph-DFS-tree" class="headerlink" title="tags:  BIT graph DFS tree"></a>tags:  <code>BIT</code> <code>graph</code> <code>DFS</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;12,12,2022 Mon  9:58:21,91]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/TIOJ-2257.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/2259">TIOJ-2259.cpp</a></strong></em></p>
+<h6 id="tags-fast-power-DP"><a href="#tags-fast-power-DP" class="headerlink" title="tags:  fast-power DP"></a>tags:  <code>fast-power</code> <code>DP</code></h6><blockquote>
+<p>[time&#x3D;12,09,2022 Fri 16:29:56,33]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/TIOJ-2259.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/2276">TIOJ-2276.cpp</a></strong></em></p>
+<h6 id="tags-permutation"><a href="#tags-permutation" class="headerlink" title="tags:  permutation"></a>tags:  <code>permutation</code></h6><blockquote>
+<p>[time&#x3D;11,05,2022 Sat 19:12:15,41]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/TIOJ-2276.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/2283">TIOJ-2283.cpp</a></strong></em></p>
+<h6 id="tags-Dijkstra-graph-difference"><a href="#tags-Dijkstra-graph-difference" class="headerlink" title="tags:  Dijkstra graph difference"></a>tags:  <code>Dijkstra</code> <code>graph</code> <code>difference</code></h6><blockquote>
+<p>[time&#x3D;11,09,2022 Wed 11:23:22,05]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/TIOJ-2283.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1131">Tree-Diameter.cpp</a></strong></em></p>
+<h6 id="tags-DFS-DP-tree"><a href="#tags-DFS-DP-tree" class="headerlink" title="tags:  DFS DP tree"></a>tags:  <code>DFS</code> <code>DP</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;09,23,2022 Fri 20:14:07,73]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Tree-Diameter.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://cses.fi/problemset/task/1133">Tree-Distances-II-2.cpp</a></strong></em></p>
+<h6 id="tags-tree-DFS"><a href="#tags-tree-DFS" class="headerlink" title="tags:  tree DFS"></a>tags:  <code>tree</code> <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;11,02,2022 Wed  9:20:11,51]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Tree-Distances-II-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/A">Trips.cpp</a></strong></em></p>
+<h6 id="tags-contest-9"><a href="#tags-contest-9" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,13,2022 Sun 14:05:19,34]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Trips.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_r">Walk-2.cpp</a></strong></em></p>
+<h6 id="tags-fast-power-2"><a href="#tags-fast-power-2" class="headerlink" title="tags:  fast-power"></a>tags:  <code>fast-power</code></h6><blockquote>
+<p>[time&#x3D;09,15,2022 Thu 21:13:55,26]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Walk-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_r">Walk.cpp</a></strong></em></p>
+<h6 id="tags-fast-power-3"><a href="#tags-fast-power-3" class="headerlink" title="tags:  fast-power"></a>tags:  <code>fast-power</code></h6><blockquote>
+<p>[time&#x3D;09,15,2022 Thu 20:13:04,30]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Walk.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/E">Water-problem.cpp</a></strong></em></p>
+<h6 id="tags-contest-10"><a href="#tags-contest-10" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,13,2022 Sun 14:49:28,75]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Water-problem.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/H">XOR-and-OR-problem.cpp</a></strong></em></p>
+<h6 id="tags-contest-11"><a href="#tags-contest-11" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,13,2022 Sun 15:39:52,90]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/XOR-and-OR-problem.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=a007">Zerojudge-a007-2.cpp</a></strong></em></p>
+<h6 id="tags-prime"><a href="#tags-prime" class="headerlink" title="tags:  prime"></a>tags:  <code>prime</code></h6><blockquote>
+<p>[time&#x3D;06,23,2022 Thu 14:24:14,87]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-a007-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=a059">Zerojudge-a059-2.cpp</a></strong></em></p>
+<h6 id="tags-pref-map-table"><a href="#tags-pref-map-table" class="headerlink" title="tags:  pref map table"></a>tags:  <code>pref</code> <code>map</code> <code>table</code></h6><blockquote>
+<p>[time&#x3D;07,04,2022 Mon 16:56:48,47]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-a059-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=a121">Zerojudge-a121.cpp</a></strong></em></p>
+<h6 id="tags-prime-1"><a href="#tags-prime-1" class="headerlink" title="tags:  prime"></a>tags:  <code>prime</code></h6><blockquote>
+<p>[time&#x3D;06,30,2022 Thu 12:37:20,39]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-a121.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=a129">Zerojudge-a129.cpp</a></strong></em></p>
+<h6 id="tags-graph-2"><a href="#tags-graph-2" class="headerlink" title="tags:  graph"></a>tags:  <code>graph</code></h6><blockquote>
+<p>[time&#x3D;04,11,2022 Mon 11:16:53,66]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-a129.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=a133">Zerojudge-a133.cpp</a></strong></em></p>
+<h6 id="tags-DP-26"><a href="#tags-DP-26" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,23,2022 Thu 10:29:46,83]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-a133.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=a194">Zerojudge-a194.cpp</a></strong></em></p>
+<h6 id="tags-DP-27"><a href="#tags-DP-27" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;08,25,2022 Thu 21:45:19,09]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-a194.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=b051">Zerojudge-b051.cpp</a></strong></em></p>
+<h6 id="tags-compare-1"><a href="#tags-compare-1" class="headerlink" title="tags:  compare"></a>tags:  <code>compare</code></h6><blockquote>
+<p>[time&#x3D;06,17,2022 Fri  6:33:16,09]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-b051.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=b123">Zerojudge-b123-2.cpp</a></strong></em></p>
+<h6 id="tags-DP-re-1"><a href="#tags-DP-re-1" class="headerlink" title="tags:  DP re"></a>tags:  <code>DP</code> <code>re</code></h6><blockquote>
+<p>[time&#x3D;08,19,2022 Fri 19:39:27,38]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-b123-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=b184">Zerojudge-b184.cpp</a></strong></em></p>
+<h6 id="tags-DP-28"><a href="#tags-DP-28" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;04,06,2022 Wed  8:11:20,58]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-b184.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=b430">Zerojudge-b430.cpp</a></strong></em></p>
+<h6 id="tags-fast-power-4"><a href="#tags-fast-power-4" class="headerlink" title="tags:  fast-power"></a>tags:  <code>fast-power</code></h6><blockquote>
+<p>[time&#x3D;03,22,2022 Tue  9:18:35,58]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-b430.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=b552">Zerojudge-b552.cpp</a></strong></em></p>
+<h6 id="tags-prime-2"><a href="#tags-prime-2" class="headerlink" title="tags:  prime"></a>tags:  <code>prime</code></h6><blockquote>
+<p>[time&#x3D;06,26,2022 Sun 12:14:10,59]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-b552.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=b967">Zerojudge-b967.cpp</a></strong></em></p>
+<h6 id="tags-DP-tree-2"><a href="#tags-DP-tree-2" class="headerlink" title="tags:  DP tree"></a>tags:  <code>DP</code> <code>tree</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-b967.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=c299">Zerojudge-c299.cpp</a></strong></em></p>
+<h6 id="tags-bitset"><a href="#tags-bitset" class="headerlink" title="tags:  bitset"></a>tags:  <code>bitset</code></h6><blockquote>
+<p>[time&#x3D;06,15,2022 Wed 19:51:45,01]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-c299.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d052">Zerojudge-d052.cpp</a></strong></em></p>
+<h6 id="tags-DP-29"><a href="#tags-DP-29" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,23,2022 Thu 11:27:10,65]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d052.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d539">Zerojudge-d539-2.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-2"><a href="#tags-seg-tree-2" class="headerlink" title="tags:  seg_tree"></a>tags:  <code>seg_tree</code></h6><blockquote>
+<p>[time&#x3D;08,18,2022 Thu 16:01:07,31]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d539-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d539">Zerojudge-d539-3.cpp</a></strong></em></p>
+<h6 id="tags-sparse-table"><a href="#tags-sparse-table" class="headerlink" title="tags:  sparse_table"></a>tags:  <code>sparse_table</code></h6><blockquote>
+<p>[time&#x3D;08,18,2022 Thu 16:31:39,45]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d539-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d539">Zerojudge-d539-4.cpp</a></strong></em></p>
+<h6 id="tags-sparse-table-re"><a href="#tags-sparse-table-re" class="headerlink" title="tags:  sparse_table re"></a>tags:  <code>sparse_table</code> <code>re</code></h6><blockquote>
+<p>[time&#x3D;08,20,2022 Sat  8:02:03,35]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d539-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d539">Zerojudge-d539-5.cpp</a></strong></em></p>
+<h6 id="tags-re-seg-tree"><a href="#tags-re-seg-tree" class="headerlink" title="tags:  re seg_tree"></a>tags:  <code>re</code> <code>seg_tree</code></h6><blockquote>
+<p>[time&#x3D;09,14,2022 Wed  9:55:45,45]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d539-5.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d539">Zerojudge-d539-6.cpp</a></strong></em></p>
+<h6 id="tags-sparse-table-1"><a href="#tags-sparse-table-1" class="headerlink" title="tags:  sparse_table"></a>tags:  <code>sparse_table</code></h6><blockquote>
+<p>[time&#x3D;09,14,2022 Wed  9:59:45,75]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d539-6.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d539">Zerojudge-d539-7.cpp</a></strong></em></p>
+<h6 id="tags-sqrt"><a href="#tags-sqrt" class="headerlink" title="tags:  sqrt"></a>tags:  <code>sqrt</code></h6><blockquote>
+<p>[time&#x3D;12,07,2022 Wed  9:10:36,26]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d539-7.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d539">Zerojudge-d539.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-3"><a href="#tags-seg-tree-3" class="headerlink" title="tags:  seg_tree"></a>tags:  <code>seg_tree</code></h6><blockquote>
+<p>[time&#x3D;04,03,2022 Sun 18:11:13,50]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d539.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d636">Zerojudge-d636.cpp</a></strong></em></p>
+<h6 id="tags-fast-power-5"><a href="#tags-fast-power-5" class="headerlink" title="tags:  fast-power"></a>tags:  <code>fast-power</code></h6><blockquote>
+<p>[time&#x3D;03,21,2022 Mon 22:45:31,10]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d636.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d652">Zerojudge-d652-2.cpp</a></strong></em></p>
+<h6 id="tags-DP-30"><a href="#tags-DP-30" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;07,21,2022 Thu 17:29:13,99]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d652-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d652">Zerojudge-d652-3.cpp</a></strong></em></p>
+<h6 id="tags-DP-re-2"><a href="#tags-DP-re-2" class="headerlink" title="tags:  DP re"></a>tags:  <code>DP</code> <code>re</code></h6><blockquote>
+<p>[time&#x3D;08,19,2022 Fri 19:15:54,69]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d652-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d652">Zerojudge-d652-4.cpp</a></strong></em></p>
+<h6 id="tags-re-DP"><a href="#tags-re-DP" class="headerlink" title="tags:  re DP"></a>tags:  <code>re</code> <code>DP</code></h6><blockquote>
+<p>[time&#x3D;09,03,2022 Sat 16:31:55,12]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d652-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d767">Zerojudge-d767-2.cpp</a></strong></em></p>
+<h6 id="tags-graph-LCA"><a href="#tags-graph-LCA" class="headerlink" title="tags:  graph LCA"></a>tags:  <code>graph</code> <code>LCA</code></h6><blockquote>
+<p>[time&#x3D;11,04,2022 Fri  8:28:42,40]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d767-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d767">Zerojudge-d767.cpp</a></strong></em></p>
+<h6 id="tags-LCA-graph-DFS-sparse-table"><a href="#tags-LCA-graph-DFS-sparse-table" class="headerlink" title="tags:  LCA graph DFS sparse_table"></a>tags:  <code>LCA</code> <code>graph</code> <code>DFS</code> <code>sparse_table</code></h6><blockquote>
+<p>[time&#x3D;10,14,2022 Fri  8:17:54,89]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d767.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d784">Zerojudge-d784-2.cpp</a></strong></em></p>
+<h6 id="tags-DP-31"><a href="#tags-DP-31" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,10,2022 Fri 13:52:41,37]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d784-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d784">Zerojudge-d784-3.cpp</a></strong></em></p>
+<h6 id="tags-DP-32"><a href="#tags-DP-32" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,10,2022 Fri 13:57:58,92]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d784-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d784">Zerojudge-d784.cpp</a></strong></em></p>
+<h6 id="tags-DP-33"><a href="#tags-DP-33" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,10,2022 Fri 13:38:31,07]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d784.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d788">Zerojudge-d788-2.cpp</a></strong></em></p>
+<h6 id="tags-pb-ds-tree-re"><a href="#tags-pb-ds-tree-re" class="headerlink" title="tags:  pb_ds tree re"></a>tags:  <code>pb_ds</code> <code>tree</code> <code>re</code></h6><blockquote>
+<p>[time&#x3D;09,03,2022 Sat 19:28:03,84]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d788-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d788">Zerojudge-d788-3.cpp</a></strong></em></p>
+<h6 id="tags-BIT-tree-re"><a href="#tags-BIT-tree-re" class="headerlink" title="tags:  BIT tree re"></a>tags:  <code>BIT</code> <code>tree</code> <code>re</code></h6><blockquote>
+<p>[time&#x3D;09,03,2022 Sat 19:42:36,78]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d788-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d788">Zerojudge-d788.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-4"><a href="#tags-seg-tree-4" class="headerlink" title="tags:  seg_tree"></a>tags:  <code>seg_tree</code></h6><blockquote>
+<p>[time&#x3D;06,11,2022 Sat  8:45:20,98]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d788.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d793">Zerojudge-d793.cpp</a></strong></em></p>
+<h6 id="tags-dijkstra-graph"><a href="#tags-dijkstra-graph" class="headerlink" title="tags:  dijkstra graph"></a>tags:  <code>dijkstra</code> <code>graph</code></h6><blockquote>
+<p>[time&#x3D;11,01,2022 Tue 11:19:59,04]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d793.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d799">Zerojudge-d799-2.cpp</a></strong></em></p>
+<h6 id="tags-lazy-tag-seg-tree"><a href="#tags-lazy-tag-seg-tree" class="headerlink" title="tags:  lazy-tag seg_tree"></a>tags:  <code>lazy-tag</code> <code>seg_tree</code></h6><blockquote>
+<p>[time&#x3D;11,22,2022 Tue 22:15:44,21]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d799-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d799">Zerojudge-d799-3.cpp</a></strong></em></p>
+<h6 id="tags-BIT-1"><a href="#tags-BIT-1" class="headerlink" title="tags:  BIT"></a>tags:  <code>BIT</code></h6><blockquote>
+<p>[time&#x3D;12,07,2022 Wed 12:54:30,09]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d799-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d799">Zerojudge-d799.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-tree-lazy-tag-own-template"><a href="#tags-seg-tree-tree-lazy-tag-own-template" class="headerlink" title="tags:  seg_tree tree lazy_tag own-template"></a>tags:  <code>seg_tree</code> <code>tree</code> <code>lazy_tag</code> <code>own-template</code></h6><blockquote>
+<p>[time&#x3D;08,19,2022 Fri 20:31:50,68]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d799.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://192.168.193.20/contest/1/problem/004">Zerojudge-d828.cpp</a></strong></em></p>
+<h6 id="tags-fast-power-fib"><a href="#tags-fast-power-fib" class="headerlink" title="tags:  fast-power fib"></a>tags:  <code>fast-power</code> <code>fib</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d828.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d847">Zerojudge-d847.cpp</a></strong></em></p>
+<h6 id="tags-BIT-2"><a href="#tags-BIT-2" class="headerlink" title="tags:  BIT"></a>tags:  <code>BIT</code></h6><blockquote>
+<p>[time&#x3D;11,24,2022 Thu 22:36:10,72]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d847.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=e367">Zerojudge-e367.py</a></strong></em></p>
+<h6 id="tags-pref-1"><a href="#tags-pref-1" class="headerlink" title="tags:  pref"></a>tags:  <code>pref</code></h6><blockquote>
+<p>[time&#x3D;08,16,2022 Tue 16:53:37,42]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-e367.py"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=e810">Zerojudge-e810-4.cpp</a></strong></em></p>
+<h6 id="tags-dijkstra-graph-1"><a href="#tags-dijkstra-graph-1" class="headerlink" title="tags:  dijkstra graph"></a>tags:  <code>dijkstra</code> <code>graph</code></h6><blockquote>
+<p>[time&#x3D;09,09,2022 Fri 17:46:28,12]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-e810-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=e810">Zerojudge-e810-6.cpp</a></strong></em></p>
+<h6 id="tags-re-graph-dijkstra"><a href="#tags-re-graph-dijkstra" class="headerlink" title="tags:  re graph dijkstra"></a>tags:  <code>re</code> <code>graph</code> <code>dijkstra</code></h6><blockquote>
+<p>[time&#x3D;10,10,2022 Mon  8:02:09,84]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-e810-6.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f314">Zerojudge-f314-2.cpp</a></strong></em></p>
+<h6 id="tags-DP-34"><a href="#tags-DP-34" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;04,26,2022 Tue 22:10:59,12]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-f314-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f315">Zerojudge-f315-3.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-5"><a href="#tags-seg-tree-5" class="headerlink" title="tags:  seg_tree"></a>tags:  <code>seg_tree</code></h6><blockquote>
+<p>[time&#x3D;06,10,2022 Fri 16:18:38,06]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-f315-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f315">Zerojudge-f315-4.cpp</a></strong></em></p>
+<h6 id="tags-pb-ds"><a href="#tags-pb-ds" class="headerlink" title="tags:  pb_ds"></a>tags:  <code>pb_ds</code></h6><blockquote>
+<p>[time&#x3D;09,06,2022 Tue 20:39:14,93]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-f315-4.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f416">Zerojudge-f416-3.cpp</a></strong></em></p>
+<h6 id="tags-string-KMP"><a href="#tags-string-KMP" class="headerlink" title="tags:  string KMP"></a>tags:  <code>string</code> <code>KMP</code></h6><blockquote>
+<p>[time&#x3D;06,22,2022 Wed 18:08:26,56]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-f416-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f505">Zerojudge-f505.cpp</a></strong></em></p>
+<h6 id="tags-BFS-1"><a href="#tags-BFS-1" class="headerlink" title="tags:  BFS"></a>tags:  <code>BFS</code></h6><blockquote>
+<p>[time&#x3D;10,20,2022 Thu  9:44:27,83]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-f505.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f640">Zerojudge-f640.cpp</a></strong></em></p>
+<h6 id="tags-vector"><a href="#tags-vector" class="headerlink" title="tags:  vector"></a>tags:  <code>vector</code></h6><blockquote>
+<p>[time&#x3D;04,05,2022 Tue  7:45:16,01]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-f640.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f680">Zerojudge-f680-2.cpp</a></strong></em></p>
+<h6 id="tags-DFS-class"><a href="#tags-DFS-class" class="headerlink" title="tags:  DFS class"></a>tags:  <code>DFS</code> <code>class</code></h6><blockquote>
+<p>[time&#x3D;06,15,2022 Wed  8:31:15,90]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-f680-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=g277">Zerojudge-g277-2.cpp</a></strong></em></p>
+<h6 id="tags-priority-queue-pref"><a href="#tags-priority-queue-pref" class="headerlink" title="tags:  priority_queue pref"></a>tags:  <code>priority_queue</code> <code>pref</code></h6><blockquote>
+<p>[time&#x3D;05,11,2022 Wed  9:53:21,21]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-g277-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=g277">Zerojudge-g277-3.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-6"><a href="#tags-seg-tree-6" class="headerlink" title="tags:  seg_tree"></a>tags:  <code>seg_tree</code></h6><blockquote>
+<p>[time&#x3D;05,11,2022 Wed 15:58:23,63]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-g277-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://192.168.193.20/contest/1/problem/004">Zerojudge-g556.cpp</a></strong></em></p>
+<h6 id="tags-fib-DP"><a href="#tags-fib-DP" class="headerlink" title="tags:  fib DP"></a>tags:  <code>fib</code> <code>DP</code></h6><blockquote>
+<p>[time&#x3D;06,24,2022 Fri 16:21:24,50]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-g556.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=g598">Zerojudge-g598-2.cpp</a></strong></em></p>
+<h6 id="tags-DSU-undo"><a href="#tags-DSU-undo" class="headerlink" title="tags:  DSU undo"></a>tags:  <code>DSU</code> <code>undo</code></h6><blockquote>
+<p>[time&#x3D;09,07,2022 Wed 10:36:50,26]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-g598-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=g640">Zerojudge-g640.cpp</a></strong></em></p>
+<h6 id="tags-binary-search-4"><a href="#tags-binary-search-4" class="headerlink" title="tags:  binary_search"></a>tags:  <code>binary_search</code></h6><blockquote>
+<p>[time&#x3D;09,14,2022 Wed 10:46:41,52]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-g640.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=g733">Zerojudge-g733.cpp</a></strong></em></p>
+<h6 id="tags-dijkstra-DP-graph"><a href="#tags-dijkstra-DP-graph" class="headerlink" title="tags:  dijkstra DP graph"></a>tags:  <code>dijkstra</code> <code>DP</code> <code>graph</code></h6><blockquote>
+<p>[time&#x3D;10,03,2022 Mon 15:00:39,40]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-g733.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=g774">Zerojudge-g774-2.cpp</a></strong></em></p>
+<h6 id="tags-DP-TOI"><a href="#tags-DP-TOI" class="headerlink" title="tags:  DP TOI"></a>tags:  <code>DP</code> <code>TOI</code></h6><blockquote>
+<p>[time&#x3D;03,19,2022 Sat 18:23:18,20]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-g774-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=h028">Zerojudge-h028.cpp</a></strong></em></p>
+<h6 id="tags-struct-greedy-APCS-re-pointer"><a href="#tags-struct-greedy-APCS-re-pointer" class="headerlink" title="tags:  struct greedy APCS re pointer"></a>tags:  <code>struct</code> <code>greedy</code> <code>APCS</code> <code>re</code> <code>pointer</code></h6><blockquote>
+<p>[time&#x3D;03,06,2022 Sun 11:32:31,40]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-h028.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=h029">Zerojudge-h029.cpp</a></strong></em></p>
+<h6 id="tags-tree-apcs"><a href="#tags-tree-apcs" class="headerlink" title="tags:  tree apcs"></a>tags:  <code>tree</code> <code>apcs</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-h029.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=i401">Zerojudge-i401.cpp</a></strong></em></p>
+<h6 id="tags-binary-search-map"><a href="#tags-binary-search-map" class="headerlink" title="tags:  binary_search map"></a>tags:  <code>binary_search</code> <code>map</code></h6><blockquote>
+<p>[time&#x3D;10,23,2022 Sun 10:34:15,51]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-i401.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=i426">Zerojudge-i426.cpp</a></strong></em></p>
+<h6 id="tags-list-1"><a href="#tags-list-1" class="headerlink" title="tags:  list"></a>tags:  <code>list</code></h6><blockquote>
+<p>[time&#x3D;06,18,2022 Sat  9:07:18,04]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-i426.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=i510">Zerojudge-i510-2.cpp</a></strong></em></p>
+<h6 id="tags-KMP-string-search"><a href="#tags-KMP-string-search" class="headerlink" title="tags:  KMP string search"></a>tags:  <code>KMP</code> <code>string</code> <code>search</code></h6><blockquote>
+<p>[time&#x3D;06,27,2022 Mon  7:54:06,54]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-i510-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=j125">Zerojudge-j125-3.cpp</a></strong></em></p>
+<h6 id="tags-graph-BFS"><a href="#tags-graph-BFS" class="headerlink" title="tags:  graph BFS"></a>tags:  <code>graph</code> <code>BFS</code></h6><blockquote>
+<p>[time&#x3D;10,30,2022 Sun 12:00:03,17]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-j125-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/00072">a-city-without-myself.cpp</a></strong></em></p>
+<h6 id="tags-choj-bit"><a href="#tags-choj-bit" class="headerlink" title="tags:  choj bit"></a>tags:  <code>choj</code> <code>bit</code></h6><blockquote>
+<p>[time&#x3D;02,06,2022 Sun 17:47:51,23]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/a-city-without-myself.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://choj.me/problem/c002">annia’s-gift.cpp</a></strong></em></p>
+<h6 id="tags-choj-chsh-exam-1"><a href="#tags-choj-chsh-exam-1" class="headerlink" title="tags:  choj chsh-exam"></a>tags:  <code>choj</code> <code>chsh-exam</code></h6><blockquote>
+<p>[time&#x3D;07,01,2022 Fri  6:32:05,54]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/annia's-gift.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/1066">annoying-money.cpp</a></strong></em></p>
+<h6 id="tags-greedy-5"><a href="#tags-greedy-5" class="headerlink" title="tags:  greedy"></a>tags:  <code>greedy</code></h6><blockquote>
+<p>[time&#x3D;10,21,2022 Fri  9:09:09,77]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/annoying-money.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/b032">award.cpp</a></strong></em></p>
+<h6 id="tags-DP-35"><a href="#tags-DP-35" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;04,11,2022 Mon 20:29:35,44]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/award.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/F">bamboo’s-bamboo-sequence.cpp</a></strong></em></p>
+<h6 id="tags-contest-12"><a href="#tags-contest-12" class="headerlink" title="tags:  contest"></a>tags:  <code>contest</code></h6><blockquote>
+<p>[time&#x3D;02,13,2022 Sun 15:03:59,54]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/bamboo's-bamboo-sequence.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/c005">becoming-the-best-coser-2.cpp</a></strong></em></p>
+<h6 id="tags-greedy-6"><a href="#tags-greedy-6" class="headerlink" title="tags:  greedy"></a>tags:  <code>greedy</code></h6><blockquote>
+<p>[time&#x3D;07,20,2022 Wed 20:58:28,23]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/becoming-the-best-coser-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://choj.me/problem/c005">becoming-the-best-coser.cpp</a></strong></em></p>
+<h6 id="tags-map-DP-choj-chsh-exam"><a href="#tags-map-DP-choj-chsh-exam" class="headerlink" title="tags:  map DP choj chsh-exam"></a>tags:  <code>map</code> <code>DP</code> <code>choj</code> <code>chsh-exam</code></h6><blockquote>
+<p>[time&#x3D;07,01,2022 Fri  7:51:16,93]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/becoming-the-best-coser.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://choj.me/problem/c006">coin-game.cpp</a></strong></em></p>
+<h6 id="tags-choj-chsh-exam-2"><a href="#tags-choj-chsh-exam-2" class="headerlink" title="tags:  choj chsh-exam"></a>tags:  <code>choj</code> <code>chsh-exam</code></h6><blockquote>
+<p>[time&#x3D;07,01,2022 Fri  6:42:48,35]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/coin-game.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/2224">country-and-road-2.cpp</a></strong></em></p>
+<h6 id="tags-graph-3"><a href="#tags-graph-3" class="headerlink" title="tags:  graph"></a>tags:  <code>graph</code></h6><blockquote>
+<p>[time&#x3D;08,25,2022 Thu  9:03:10,09]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/country-and-road-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/2224">country-and-road.cpp</a></strong></em></p>
+<h6 id="tags-graph-4"><a href="#tags-graph-4" class="headerlink" title="tags:  graph"></a>tags:  <code>graph</code></h6><blockquote>
+<p>[time&#x3D;08,25,2022 Thu  7:13:29,95]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/country-and-road.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://choj.me/problem/c004">crusading-monkey.cpp</a></strong></em></p>
+<h6 id="tags-BFS-choj-chsh-exam"><a href="#tags-BFS-choj-chsh-exam" class="headerlink" title="tags:  BFS choj chsh-exam"></a>tags:  <code>BFS</code> <code>choj</code> <code>chsh-exam</code></h6><blockquote>
+<p>[time&#x3D;07,01,2022 Fri 20:16:50,83]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/crusading-monkey.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/00024">disappearing-number.cpp</a></strong></em></p>
+<h6 id="tags-choj-bit-bitset"><a href="#tags-choj-bit-bitset" class="headerlink" title="tags:  choj bit bitset"></a>tags:  <code>choj</code> <code>bit</code> <code>bitset</code></h6><blockquote>
+<p>[time&#x3D;02,09,2022 Wed 11:35:49,13]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/disappearing-number.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/00072">fake-sun2.cpp</a></strong></em></p>
+<h6 id="tags-choj-bitset-bit"><a href="#tags-choj-bitset-bit" class="headerlink" title="tags:  choj bitset bit"></a>tags:  <code>choj</code> <code>bitset</code> <code>bit</code></h6><blockquote>
+<p>[time&#x3D;02,06,2022 Sun 18:42:40,23]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/fake-sun2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/00053">fast-power.cpp</a></strong></em></p>
+<h6 id="tags-choj-bit-choj-test"><a href="#tags-choj-bit-choj-test" class="headerlink" title="tags:  choj bit choj test"></a>tags:  <code>choj</code> <code>bit</code> <code>choj</code> <code>test</code></h6><blockquote>
+<p>[time&#x3D;02,05,2022 Sat 17:37:42,79]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/fast-power.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1049">filling-box.cpp</a></strong></em></p>
+<h6 id="tags-DP-36"><a href="#tags-DP-36" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;11,05,2022 Sat 14:10:09,04]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/filling-box.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/00008">flower-picking-II.cpp</a></strong></em></p>
+<h6 id="tags-choj-DFS"><a href="#tags-choj-DFS" class="headerlink" title="tags:  choj DFS"></a>tags:  <code>choj</code> <code>DFS</code></h6><blockquote>
+<p>[time&#x3D;02,11,2022 Fri 20:02:21,83]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/flower-picking-II.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/00007">flower-picking.cpp</a></strong></em></p>
+<h6 id="tags-choj-DP"><a href="#tags-choj-DP" class="headerlink" title="tags:  choj DP"></a>tags:  <code>choj</code> <code>DP</code></h6><blockquote>
+<p>[time&#x3D;02,10,2022 Thu 14:54:20,99]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/flower-picking.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/a053">funny-woods.cpp</a></strong></em></p>
+<h6 id="tags-choj"><a href="#tags-choj" class="headerlink" title="tags:  choj"></a>tags:  <code>choj</code></h6><blockquote>
+<p>[time&#x3D;02,08,2022 Tue 22:41:20,73]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/funny-woods.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/a053">funny-woods2.cpp</a></strong></em></p>
+<h6 id="tags-choj-deque"><a href="#tags-choj-deque" class="headerlink" title="tags:  choj deque"></a>tags:  <code>choj</code> <code>deque</code></h6><blockquote>
+<p>[time&#x3D;02,08,2022 Tue 22:57:11,88]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/funny-woods2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://choj.me/problem/c003">going-out-at-night.cpp</a></strong></em></p>
+<h6 id="tags-map-choj-chsh-exam"><a href="#tags-map-choj-chsh-exam" class="headerlink" title="tags:  map choj chsh-exam"></a>tags:  <code>map</code> <code>choj</code> <code>chsh-exam</code></h6><blockquote>
+<p>[time&#x3D;07,01,2022 Fri  6:48:54,97]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/going-out-at-night.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>interval-calculation.cpp</strong></em></p>
+<h6 id="tags-choj-citrc-unordered-map-DP"><a href="#tags-choj-citrc-unordered-map-DP" class="headerlink" title="tags:  choj citrc unordered_map DP"></a>tags:  <code>choj</code> <code>citrc</code> <code>unordered_map</code> <code>DP</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/interval-calculation.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>interval-calculation2.cpp</strong></em></p>
+<h6 id="tags-set-2"><a href="#tags-set-2" class="headerlink" title="tags:  set"></a>tags:  <code>set</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/interval-calculation2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://open.kattis.com/problems/alphabet">kattis-Alphabet2.cpp</a></strong></em></p>
+<h6 id="tags-re-DP-1"><a href="#tags-re-DP-1" class="headerlink" title="tags:  re DP"></a>tags:  <code>re</code> <code>DP</code></h6><blockquote>
+<p>[time&#x3D;02,20,2022 Sun 10:36:21,45]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/kattis-Alphabet2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://open.kattis.com/problems/commercials">kattis-Radio_Commercials.cpp</a></strong></em></p>
+<h6 id="tags-DP-37"><a href="#tags-DP-37" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/kattis-Radio_Commercials.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://open.kattis.com/problems/walrusweights">kattis-Walrus-Weights.cpp</a></strong></em></p>
+<h6 id="tags-DP-38"><a href="#tags-DP-38" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;04,06,2022 Wed 17:48:02,14]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/kattis-Walrus-Weights.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/00071">lonelier.cpp</a></strong></em></p>
+<h6 id="tags-choj-bit-bitset-1"><a href="#tags-choj-bit-bitset-1" class="headerlink" title="tags:  choj bit bitset"></a>tags:  <code>choj</code> <code>bit</code> <code>bitset</code></h6><blockquote>
+<p>[time&#x3D;02,08,2022 Tue 22:22:25,66]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/lonelier.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/1069">magical-task-2.cpp</a></strong></em></p>
+<h6 id="tags-graph-bigraph"><a href="#tags-graph-bigraph" class="headerlink" title="tags:  graph bigraph"></a>tags:  <code>graph</code> <code>bigraph</code></h6><blockquote>
+<p>[time&#x3D;10,21,2022 Fri 16:06:37,83]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/magical-task-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>magical-task-3.cpp</strong></em></p>
+<h6 id="tags-re-bigraph-graph"><a href="#tags-re-bigraph-graph" class="headerlink" title="tags:  re bigraph graph"></a>tags:  <code>re</code> <code>bigraph</code> <code>graph</code></h6><blockquote>
+<p>[time&#x3D;10,29,2022 Sat 13:25:25,65]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/magical-task-3.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4933">master.cpp</a></strong></em></p>
+<h6 id="tags-DP-39"><a href="#tags-DP-39" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;10,16,2022 Sun  9:01:26,79]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/master.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1168">middle.cpp</a></strong></em></p>
+<h6 id="tags-pb-ds-1"><a href="#tags-pb-ds-1" class="headerlink" title="tags:  pb_ds"></a>tags:  <code>pb_ds</code></h6><blockquote>
+<p>[time&#x3D;10,15,2022 Sat  8:41:59,93]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/middle.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/J">mining-water-chestnut.cpp</a></strong></em></p>
+<h6 id="tags-contest-contest-gp"><a href="#tags-contest-contest-gp" class="headerlink" title="tags:  contest contest gp"></a>tags:  <code>contest</code> <code>contest</code> <code>gp</code></h6><blockquote>
+<p>[time&#x3D;02,14,2022 Mon 13:06:32,41]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/mining-water-chestnut.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/d015">move-in-playground.cpp</a></strong></em></p>
+<h6 id="tags-Dijkstra"><a href="#tags-Dijkstra" class="headerlink" title="tags:  Dijkstra"></a>tags:  <code>Dijkstra</code></h6><blockquote>
+<p>[time&#x3D;11,07,2022 Mon 20:01:04,59]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/move-in-playground.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>ouo.cpp</strong></em></p>
+<h6 id="tags-KMP-1"><a href="#tags-KMP-1" class="headerlink" title="tags:  KMP"></a>tags:  <code>KMP</code></h6><blockquote>
+<p>[time&#x3D;08,02,2022 Tue 22:27:26,95]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/ouo.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="http://choj.me/problem/00121">palace-emissary.cpp</a></strong></em></p>
+<h6 id="tags-DFS-BFS"><a href="#tags-DFS-BFS" class="headerlink" title="tags:  DFS BFS"></a>tags:  <code>DFS</code> <code>BFS</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/palace-emissary.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/1067">prime-task.cpp</a></strong></em></p>
+<h6 id="tags-DP-40"><a href="#tags-DP-40" class="headerlink" title="tags:  DP"></a>tags:  <code>DP</code></h6><blockquote>
+<p>[time&#x3D;10,21,2022 Fri  8:27:03,38]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/prime-task.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://192.168.193.20/contest/1/problem/004">seat.cpp</a></strong></em></p>
+<h6 id="tags-fast-power-fib-1"><a href="#tags-fast-power-fib-1" class="headerlink" title="tags:  fast-power fib"></a>tags:  <code>fast-power</code> <code>fib</code></h6><blockquote>
+<p>[time&#x3D;06,11,2022 Sat  9:39:02,66]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/seat.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1129">square-game.cpp</a></strong></em></p>
+<h6 id="tags-graph-bigraph-1"><a href="#tags-graph-bigraph-1" class="headerlink" title="tags:  graph bigraph"></a>tags:  <code>graph</code> <code>bigraph</code></h6><blockquote>
+<p>[time&#x3D;10,22,2022 Sat 13:13:51,77]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/square-game.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://203.64.159.117/ShowProblem?problemid=a268">sum-of-score.cpp</a></strong></em></p>
+<h6 id="tags-seg-tree-7"><a href="#tags-seg-tree-7" class="headerlink" title="tags:  seg_tree"></a>tags:  <code>seg_tree</code></h6><blockquote>
+<p>[time&#x3D;05,05,2022 Thu 17:49:00,56]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/sum-of-score.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong>t.cpp</strong></em></p>
+<h6 id="tags-test"><a href="#tags-test" class="headerlink" title="tags:  test"></a>tags:  <code>test</code></h6><blockquote>
+<p>[time&#x3D;12,10,2022 Sat 22:16:52,06]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/t.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=b035">tcirc-b035-2.cpp</a></strong></em></p>
+<h6 id="tags-gp-hash-table"><a href="#tags-gp-hash-table" class="headerlink" title="tags:  gp_hash_table"></a>tags:  <code>gp_hash_table</code></h6><blockquote>
+<p>[time&#x3D;]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/tcirc-b035-2.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=b035">tcirc-b035.cpp</a></strong></em></p>
+<h6 id="tags-multiset"><a href="#tags-multiset" class="headerlink" title="tags:  multiset"></a>tags:  <code>multiset</code></h6><blockquote>
+<p>[time&#x3D;06,21,2022 Tue 11:10:24,69]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/tcirc-b035.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=c085">tcirc-c085.cpp</a></strong></em></p>
+<h6 id="tags-DSU"><a href="#tags-DSU" class="headerlink" title="tags:  DSU"></a>tags:  <code>DSU</code></h6><blockquote>
+<p>[time&#x3D;09,16,2022 Fri 22:31:59,28]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/tcirc-c085.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/2266">tioj-2266.cpp</a></strong></em></p>
+<h6 id="tags-greedy-set"><a href="#tags-greedy-set" class="headerlink" title="tags:  greedy set"></a>tags:  <code>greedy</code> <code>set</code></h6><blockquote>
+<p>[time&#x3D;10,01,2022 Sat 12:22:19,50]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/tioj-2266.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<p><em><strong><a target="_blank" rel="noopener" href="https://tioj.ck.tp.edu.tw/problems/1509">tunnel.cpp</a></strong></em></p>
+<h6 id="tags-graph-5"><a href="#tags-graph-5" class="headerlink" title="tags:  graph"></a>tags:  <code>graph</code></h6><blockquote>
+<p>[time&#x3D;08,25,2022 Thu  6:52:52,49]</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/tunnel.cpp"><em><strong><font color = '#AAAAAA'>code</font></strong></em></a></p>
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        algorithm
+    </div>
+    <div class='spoiler-content'>
+        <p><em><strong>APCS</strong></em> 1<br><em><strong>BFS</strong></em> 10<br><em><strong>BIT</strong></em> 11<br><em><strong>DAG</strong></em> 1<br><em><strong>DC</strong></em> 5<br><em><strong>DFS</strong></em> 18<br><em><strong>DP</strong></em> 69<br><em><strong>DSU</strong></em> 8<br><em><strong>Dijkstra</strong></em> 2<br><em><strong>KMP</strong></em> 4<br><em><strong>LCA</strong></em> 6<br><em><strong>MST</strong></em> 1<br><em><strong>TOI</strong></em> 1<br><em><strong>abba</strong></em> 1<br><em><strong>apcs</strong></em> 1<br><em><strong>bigraph</strong></em> 4<br><em><strong>binary-search</strong></em> 1<br><em><strong>binary_search</strong></em> 11<br><em><strong>bit</strong></em> 5<br><em><strong>bitset</strong></em> 4<br><em><strong>brute</strong></em> 2<br><em><strong>choj</strong></em> 17<br><em><strong>chsh-exam</strong></em> 6<br><em><strong>citrc</strong></em> 1<br><em><strong>class</strong></em> 1<br><em><strong>compare</strong></em> 3<br><em><strong>contest</strong></em> 16<br><em><strong>deque</strong></em> 4<br><em><strong>difference</strong></em> 3<br><em><strong>dijkstra</strong></em> 5<br><em><strong>eg.</strong></em> 1<br><em><strong>emissary”.cpp</strong></em> 1<br><em><strong>fast-power</strong></em> 10<br><em><strong>fib</strong></em> 4<br><em><strong>geometry</strong></em> 1<br><em><strong>gp</strong></em> 1<br><em><strong>gp_hash_table</strong></em> 2<br><em><strong>graph</strong></em> 31<br><em><strong>greedy</strong></em> 15<br><em><strong>half-brute</strong></em> 2<br><em><strong>hash</strong></em> 1<br><em><strong>lazy-tag</strong></em> 1<br><em><strong>lazy_tag</strong></em> 2<br><em><strong>list</strong></em> 2<br><em><strong>lower_bound</strong></em> 2<br><em><strong>map</strong></em> 8<br><em><strong>math</strong></em> 2<br><em><strong>multiset</strong></em> 1<br><em><strong>offline</strong></em> 2<br><em><strong>operator</strong></em> 3<br><em><strong>own-template</strong></em> 1<br><em><strong>pb_ds</strong></em> 6<br><em><strong>permutation</strong></em> 1<br><em><strong>pointer</strong></em> 1<br><em><strong>pref</strong></em> 5<br><em><strong>prime</strong></em> 3<br><em><strong>priority_queue</strong></em> 8<br><em><strong>queue</strong></em> 3<br><em><strong>re</strong></em> 14<br><em><strong>re-search</strong></em> 3<br><em><strong>search</strong></em> 2<br><em><strong>seg_tree</strong></em> 15<br><em><strong>set</strong></em> 7<br><em><strong>sparse_table</strong></em> 5<br><em><strong>sqrt</strong></em> 1<br><em><strong>stack</strong></em> 1<br><em><strong>string</strong></em> 2<br><em><strong>struct</strong></em> 5<br><em><strong>sweep-line</strong></em> 9<br><em><strong>table</strong></em> 1<br><em><strong>tapo</strong></em> 2<br><em><strong>tapoo</strong></em> 1<br><em><strong>template</strong></em> 1<br><em><strong>test</strong></em> 2<br><em><strong>tree</strong></em> 23<br><em><strong>undo</strong></em> 1<br><em><strong>unordered_map</strong></em> 1<br><em><strong>unordered_set</strong></em> 1<br><em><strong>vector</strong></em> 3</p>
+
+    </div>
+</div>
+<p>總題數: 442</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/algosolution/categories/%E8%B3%87%E8%A8%8A/" class="category-chain-item">資訊</a>
+  
+  
+    <span>></span>
+    
+  <a href="/algosolution/categories/%E8%B3%87%E8%A8%8A/%E6%BC%94%E7%AE%97%E6%B3%95/" class="category-chain-item">演算法</a>
+  
+  
+    <span>></span>
+    
+  <a href="/algosolution/categories/%E8%B3%87%E8%A8%8A/%E6%BC%94%E7%AE%97%E6%B3%95/%E9%A1%8C%E5%96%AE/" class="category-chain-item">題單</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/algosolution/tags/algo/">#algo</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>algosolution</div>
+      <div>http://mysh212.github.io/algosolution/algosolution/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>ysh</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>發布於</div>
+          <div>2022年11月13日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新於</div>
+          <div>2023年3月19日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>許可協議</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/algosolution/calculus/" title="微積分上課筆記1">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">微積分上課筆記1</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/algosolution/first/" title="first">
+                        <span class="hidden-mobile">first</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"mysh212/algosolution","repo-id":"MDEwOlJlcG9zaXRvcnkzNTY0ODM5NzA=","category":"Announcements","category-id":"DIC_kwDOFT-Dgs4CSnb8","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-TW"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目錄</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        總訪問量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        總訪客數 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/algosolution/js/events.js" ></script>
+<script  src="/algosolution/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/algosolution/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script  src="https://lib.baomitu.com/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/algosolution/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/algosolution/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允許 JavaScript 運行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>
