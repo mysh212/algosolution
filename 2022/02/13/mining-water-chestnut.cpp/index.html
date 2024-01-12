@@ -16,26 +16,26 @@
   <meta name="author" content="ysh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="d539. 區間 MAX - 高中生程式解題系統Zerojudge-d539-5.cpp &#x2F;&#x2F; Author : ysh &#x2F;&#x2F; 09&#x2F;14&#x2F;2022 Wed  9:55:45.45 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; #include&lt;seg_tree&gt; int main() &amp;#123;     ios::sync_with_st">
+    <meta name="description" content="Codeforces - mining-water-chestnutmining-water-chestnut.cpp &#x2F;&#x2F; Author : ysh &#x2F;&#x2F; 02&#x2F;14&#x2F;2022 Mon 13:06:32.40 &#x2F;&#x2F; https:&#x2F;&#x2F;codeforces.com&#x2F;group&#x2F;H0qY3QmnOW&#x2F;contest&#x2F;366708&#x2F;problem&#x2F;J #include&lt;bits&#x2F;stdc++.h&gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="d539. 區間 MAX - 高中生程式解題系統">
-<meta property="og:url" content="http://mysh212.github.io/algosolution/2022/09/14/Zerojudge-d539-5.cpp/index.html">
+<meta property="og:title" content="Codeforces - mining-water-chestnut">
+<meta property="og:url" content="http://mysh212.github.io/algosolution/2022/02/13/mining-water-chestnut.cpp/index.html">
 <meta property="og:site_name" content="ysh&#39;s note">
-<meta property="og:description" content="d539. 區間 MAX - 高中生程式解題系統Zerojudge-d539-5.cpp &#x2F;&#x2F; Author : ysh &#x2F;&#x2F; 09&#x2F;14&#x2F;2022 Wed  9:55:45.45 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; #include&lt;seg_tree&gt; int main() &amp;#123;     ios::sync_with_st">
+<meta property="og:description" content="Codeforces - mining-water-chestnutmining-water-chestnut.cpp &#x2F;&#x2F; Author : ysh &#x2F;&#x2F; 02&#x2F;14&#x2F;2022 Mon 13:06:32.40 &#x2F;&#x2F; https:&#x2F;&#x2F;codeforces.com&#x2F;group&#x2F;H0qY3QmnOW&#x2F;contest&#x2F;366708&#x2F;problem&#x2F;J #include&lt;bits&#x2F;stdc++.h&gt;">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-09-14T01:55:45.000Z">
-<meta property="article:modified_time" content="2024-01-11T10:31:02.513Z">
+<meta property="article:published_time" content="2022-02-13T08:21:43.000Z">
+<meta property="article:modified_time" content="2024-01-12T04:17:42.815Z">
 <meta property="article:author" content="ysh">
 <meta property="article:tag" content="solution">
-<meta property="article:tag" content="re">
-<meta property="article:tag" content="seg_tree">
+<meta property="article:tag" content="contest">
+<meta property="article:tag" content="gp">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>d539. 區間 MAX - 高中生程式解題系統 - ysh&#39;s note</title>
+  <title>Codeforces - mining-water-chestnut - ysh&#39;s note</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -233,7 +233,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="d539. 區間 MAX - 高中生程式解題系統"></span>
+            <span id="subtitle" data-typed-text="Codeforces - mining-water-chestnut"></span>
           
         </div>
 
@@ -244,8 +244,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-14 09:55" pubdate>
-          2022年9月14日 上午
+        <time datetime="2022-02-13 16:21" pubdate>
+          2022年2月13日 下午
         </time>
       </span>
     
@@ -256,7 +256,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          445 字
+          798 字
         
       </span>
     
@@ -267,7 +267,7 @@
         
         
         
-          4 分鐘
+          7 分鐘
         
       </span>
     
@@ -313,12 +313,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">d539. 區間 MAX - 高中生程式解題系統</h1>
+            <h1 style="display: none">Codeforces - mining-water-chestnut</h1>
             
               <p class="note note-warning">
                 
                   
-                    本文最後更新於：2024年1月11日 晚上
+                    本文最後更新於：2024年1月12日 中午
                   
                 
               </p>
@@ -326,33 +326,50 @@
             
               <div class="markdown-body">
                 
-                <h1 id="d539-區間-MAX-高中生程式解題系統"><a href="#d539-區間-MAX-高中生程式解題系統" class="headerlink" title="d539. 區間 MAX - 高中生程式解題系統"></a><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d539">d539. 區間 MAX - 高中生程式解題系統</a></h1><p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Zerojudge-d539-5.cpp"><em><strong>Zerojudge-d539-5.cpp</strong></em></a></p>
+                <h1 id="Codeforces-mining-water-chestnut"><a href="#Codeforces-mining-water-chestnut" class="headerlink" title="Codeforces - mining-water-chestnut"></a><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/J">Codeforces - mining-water-chestnut</a></h1><p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/mining-water-chestnut.cpp"><em><strong>mining-water-chestnut.cpp</strong></em></a></p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// Author : ysh</span>
-<span class="token comment">// 09/14/2022 Wed  9:55:45.45</span>
+<span class="token comment">// 02/14/2022 Mon 13:06:32.40</span>
+<span class="token comment">// https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/J</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;seg_tree></span></span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">int</span> <span class="token expression"><span class="token keyword">long</span> <span class="token keyword">long</span></span></span>
+<span class="token keyword">signed</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     ios<span class="token double-colon punctuation">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token keyword">int</span> n<span class="token punctuation">;</span>cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
-    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token function">f</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">&amp;</span>i <span class="token operator">:</span> f<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        cin<span class="token operator">>></span>i<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b<span class="token punctuation">[</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        cin<span class="token operator">>></span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        b<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> b<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-    seg_tree<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token function">t</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> <span class="token function">max</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> m<span class="token punctuation">;</span>cin<span class="token operator">>></span>m<span class="token punctuation">;</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>m<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        cin<span class="token operator">>></span>a<span class="token operator">>></span>b<span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>a <span class="token operator">></span> b<span class="token punctuation">)</span> <span class="token function">swap</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        cout<span class="token operator">&lt;&lt;</span>t<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span>a <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>b <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token string">"\n"</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> mmax <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> tmp <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> mmin <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">bool</span> e <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">!</span>e<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> mmin<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        e <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment">// for(int i : b) &#123;</span>
+        <span class="token comment">//     cout&lt;&lt;i&lt;&lt;" ";</span>
+        <span class="token comment">// &#125;</span>
+        <span class="token comment">// cout&lt;&lt;" "&lt;&lt;mmax&lt;&lt;"\n";</span>
+        tmp <span class="token operator">=</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> mmax<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> tmp<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                mmin <span class="token operator">=</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                mmax <span class="token operator">=</span> b<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">-</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                tmp <span class="token operator">=</span> b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token comment">//mmax = max(mmax,b[j] - b[i]);</span>
+        <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span>mmax <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">?</span> mmax <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure><link rel="stylesheet" href="/algosolution/css/spoiler.css" type="text/css"><script src="/algosolution/js/spoiler.js" type="text/javascript" async></script>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure><link rel="stylesheet" href="/algosolution/css/spoiler.css" type="text/css"><script src="/algosolution/js/spoiler.js" type="text/javascript" async></script>
                 
               </div>
             
@@ -380,7 +397,7 @@
   
     <span>></span>
     
-  <a href="/algosolution/categories/%E8%B3%87%E8%A8%8A/%E9%A1%8C%E8%A7%A3/Zerojudge/" class="category-chain-item">Zerojudge</a>
+  <a href="/algosolution/categories/%E8%B3%87%E8%A8%8A/%E9%A1%8C%E8%A7%A3/Codeforces/" class="category-chain-item">Codeforces</a>
   
   
 
@@ -401,9 +418,9 @@
       
         <a href="/algosolution/tags/solution/">#solution</a>
       
-        <a href="/algosolution/tags/re/">#re</a>
+        <a href="/algosolution/tags/contest/">#contest</a>
       
-        <a href="/algosolution/tags/seg-tree/">#seg_tree</a>
+        <a href="/algosolution/tags/gp/">#gp</a>
       
     </div>
   
@@ -415,8 +432,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>d539. 區間 MAX - 高中生程式解題系統</div>
-      <div>http://mysh212.github.io/algosolution/2022/09/14/Zerojudge-d539-5.cpp/</div>
+      <div>Codeforces - mining-water-chestnut</div>
+      <div>http://mysh212.github.io/algosolution/2022/02/13/mining-water-chestnut.cpp/</div>
     </div>
     <div class="license-meta">
       
@@ -428,13 +445,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>發布於</div>
-          <div>2022年9月14日</div>
+          <div>2022年2月13日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新於</div>
-          <div>2024年1月11日</div>
+          <div>2024年1月12日</div>
         </div>
       
       
@@ -465,9 +482,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/algosolution/2022/09/14/Zerojudge-d539-6.cpp/" title="d539. 區間 MAX - 高中生程式解題系統">
+                      <a href="/algosolution/2022/02/20/kattis-Alphabet2.cpp/" title="Alphabet – Kattis, Kattis">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">d539. 區間 MAX - 高中生程式解題系統</span>
+                        <span class="hidden-mobile">Alphabet – Kattis, Kattis</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -475,8 +492,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/algosolution/2022/09/14/Flowers-2.cpp/" title="Q - Flowers">
-                        <span class="hidden-mobile">Q - Flowers</span>
+                      <a href="/algosolution/2022/02/13/Colten-work-in-THSR.cpp/" title="Codeforces - Colten-work-in-THSR">
+                        <span class="hidden-mobile">Codeforces - Colten-work-in-THSR</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -16,25 +16,26 @@
   <meta name="author" content="ysh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Codeforces - Perfect-takePerfect-take.cpp &#x2F;&#x2F; Author : ysh &#x2F;&#x2F; 02&#x2F;14&#x2F;2022 Mon 13:00:20.27 &#x2F;&#x2F; https:&#x2F;&#x2F;codeforces.com&#x2F;group&#x2F;H0qY3QmnOW&#x2F;contest&#x2F;366708&#x2F;problem&#x2F;D #include&lt;bits&#x2F;stdc++.h&gt; using namespace s">
+    <meta name="description" content="d061. Q-4-20. 監看華山練功場 - TCFSH CIRC JudgeAP325-d061.cpp &#x2F;&#x2F; Author : ysh &#x2F;&#x2F; 07&#x2F;25&#x2F;2022 Mon 17:00:30.84 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; vector&lt;pair&lt;int,int&gt;&gt;f; int n; int x,y; int c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces - Perfect-take">
-<meta property="og:url" content="http://mysh212.github.io/algosolution/2022/02/14/Perfect-take.cpp/index.html">
+<meta property="og:title" content="d061. Q-4-20. 監看華山練功場 - TCFSH CIRC Judge">
+<meta property="og:url" content="http://mysh212.github.io/algosolution/2022/07/24/AP325-d061.cpp/index.html">
 <meta property="og:site_name" content="ysh&#39;s note">
-<meta property="og:description" content="Codeforces - Perfect-takePerfect-take.cpp &#x2F;&#x2F; Author : ysh &#x2F;&#x2F; 02&#x2F;14&#x2F;2022 Mon 13:00:20.27 &#x2F;&#x2F; https:&#x2F;&#x2F;codeforces.com&#x2F;group&#x2F;H0qY3QmnOW&#x2F;contest&#x2F;366708&#x2F;problem&#x2F;D #include&lt;bits&#x2F;stdc++.h&gt; using namespace s">
+<meta property="og:description" content="d061. Q-4-20. 監看華山練功場 - TCFSH CIRC JudgeAP325-d061.cpp &#x2F;&#x2F; Author : ysh &#x2F;&#x2F; 07&#x2F;25&#x2F;2022 Mon 17:00:30.84 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; vector&lt;pair&lt;int,int&gt;&gt;f; int n; int x,y; int c">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-02-14T05:00:20.000Z">
-<meta property="article:modified_time" content="2024-01-11T10:23:40.808Z">
+<meta property="article:published_time" content="2022-07-24T11:21:20.000Z">
+<meta property="article:modified_time" content="2024-01-12T04:19:43.898Z">
 <meta property="article:author" content="ysh">
 <meta property="article:tag" content="solution">
-<meta property="article:tag" content="contest">
+<meta property="article:tag" content="sweep-line">
+<meta property="article:tag" content="greedy">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Codeforces - Perfect-take - ysh&#39;s note</title>
+  <title>d061. Q-4-20. 監看華山練功場 - TCFSH CIRC Judge - ysh&#39;s note</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -232,7 +233,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Codeforces - Perfect-take"></span>
+            <span id="subtitle" data-typed-text="d061. Q-4-20. 監看華山練功場 - TCFSH CIRC Judge"></span>
           
         </div>
 
@@ -243,8 +244,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-02-14 13:00" pubdate>
-          2022年2月14日 下午
+        <time datetime="2022-07-24 19:21" pubdate>
+          2022年7月24日 晚上
         </time>
       </span>
     
@@ -255,7 +256,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          469 字
+          870 字
         
       </span>
     
@@ -266,7 +267,7 @@
         
         
         
-          4 分鐘
+          8 分鐘
         
       </span>
     
@@ -312,12 +313,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Codeforces - Perfect-take</h1>
+            <h1 style="display: none">d061. Q-4-20. 監看華山練功場 - TCFSH CIRC Judge</h1>
             
               <p class="note note-warning">
                 
                   
-                    本文最後更新於：2024年1月11日 晚上
+                    本文最後更新於：2024年1月12日 中午
                   
                 
               </p>
@@ -325,33 +326,53 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Codeforces-Perfect-take"><a href="#Codeforces-Perfect-take" class="headerlink" title="Codeforces - Perfect-take"></a><a target="_blank" rel="noopener" href="https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/D">Codeforces - Perfect-take</a></h1><p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/Perfect-take.cpp"><em><strong>Perfect-take.cpp</strong></em></a></p>
+                <h1 id="d061-Q-4-20-監看華山練功場-TCFSH-CIRC-Judge"><a href="#d061-Q-4-20-監看華山練功場-TCFSH-CIRC-Judge" class="headerlink" title="d061. Q-4-20. 監看華山練功場 - TCFSH CIRC Judge"></a><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d061">d061. Q-4-20. 監看華山練功場 - TCFSH CIRC Judge</a></h1><p><a target="_blank" rel="noopener" href="https://github.com/mysh212/Coding/blob/master/AP325-d061.cpp"><em><strong>AP325-d061.cpp</strong></em></a></p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// Author : ysh</span>
-<span class="token comment">// 02/14/2022 Mon 13:00:20.27</span>
-<span class="token comment">// https://codeforces.com/group/H0qY3QmnOW/contest/366708/problem/D</span>
+<span class="token comment">// 07/25/2022 Mon 17:00:30.84</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">int</span> <span class="token expression"><span class="token keyword">long</span> <span class="token keyword">long</span></span></span>
-<span class="token keyword">inline</span> <span class="token keyword">void</span> <span class="token function">opt</span><span class="token punctuation">(</span><span class="token keyword">bool</span> n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> cout<span class="token operator">&lt;&lt;</span><span class="token string">"yeah!"</span><span class="token punctuation">;</span>
-    <span class="token keyword">else</span> cout<span class="token operator">&lt;&lt;</span><span class="token string">"oh no..."</span><span class="token punctuation">;</span>
+vector<span class="token operator">&lt;</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">>></span>f<span class="token punctuation">;</span>
+<span class="token keyword">int</span> n<span class="token punctuation">;</span>
+<span class="token keyword">int</span> x<span class="token punctuation">,</span>y<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">check</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span><span class="token keyword">int</span> r<span class="token punctuation">,</span><span class="token keyword">int</span> m<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>l <span class="token operator">>=</span> r<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> mmax <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> ll <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> next <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> m<span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        next <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>first <span class="token operator">></span> l<span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>second <span class="token operator">-</span> l <span class="token operator">></span> mmax<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            mmax <span class="token operator">=</span> f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>second <span class="token operator">-</span> l<span class="token punctuation">;</span>
+            ll <span class="token operator">=</span> f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>second<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>ll <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> INT_MIN<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">check</span><span class="token punctuation">(</span>ll<span class="token punctuation">,</span>r<span class="token punctuation">,</span>next<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-<span class="token keyword">signed</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     ios<span class="token double-colon punctuation">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">;</span>cin<span class="token operator">>></span>a<span class="token operator">>></span>b<span class="token operator">>></span>c<span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token operator">*</span><span class="token number">6</span><span class="token operator">+</span><span class="token number">15</span><span class="token operator">></span>c<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token function">opt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
+    cin<span class="token operator">>></span>x<span class="token operator">>></span>y<span class="token punctuation">;</span>
+    f<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token operator">&amp;</span>i <span class="token operator">:</span> f<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        cin<span class="token operator">>></span>i<span class="token punctuation">.</span>first<span class="token operator">>></span>i<span class="token punctuation">.</span>second<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>first <span class="token operator">></span> i<span class="token punctuation">.</span>second<span class="token punctuation">)</span> <span class="token function">swap</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>first<span class="token punctuation">,</span>i<span class="token punctuation">.</span>second<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token function">sort</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>f<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">(</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span> a<span class="token punctuation">,</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span> b<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>first <span class="token operator">!=</span> b<span class="token punctuation">.</span>first<span class="token punctuation">)</span> <span class="token keyword">return</span> a<span class="token punctuation">.</span>first <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>first<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> a<span class="token punctuation">.</span>second <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>second<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token function">check</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>ans <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        cout<span class="token operator">&lt;&lt;</span><span class="token string">"-1"</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>b <span class="token operator">*</span> <span class="token number">6</span> <span class="token operator">-</span> <span class="token number">15</span> <span class="token operator">&lt;</span> c<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token function">opt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token function">opt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span>ans<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure><link rel="stylesheet" href="/algosolution/css/spoiler.css" type="text/css"><script src="/algosolution/js/spoiler.js" type="text/javascript" async></script>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure><link rel="stylesheet" href="/algosolution/css/spoiler.css" type="text/css"><script src="/algosolution/js/spoiler.js" type="text/javascript" async></script>
                 
               </div>
             
@@ -379,7 +400,7 @@
   
     <span>></span>
     
-  <a href="/algosolution/categories/%E8%B3%87%E8%A8%8A/%E9%A1%8C%E8%A7%A3/Codeforces/" class="category-chain-item">Codeforces</a>
+  <a href="/algosolution/categories/%E8%B3%87%E8%A8%8A/%E9%A1%8C%E8%A7%A3/tcirc/" class="category-chain-item">tcirc</a>
   
   
 
@@ -400,7 +421,9 @@
       
         <a href="/algosolution/tags/solution/">#solution</a>
       
-        <a href="/algosolution/tags/contest/">#contest</a>
+        <a href="/algosolution/tags/sweep-line/">#sweep-line</a>
+      
+        <a href="/algosolution/tags/greedy/">#greedy</a>
       
     </div>
   
@@ -412,8 +435,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Codeforces - Perfect-take</div>
-      <div>http://mysh212.github.io/algosolution/2022/02/14/Perfect-take.cpp/</div>
+      <div>d061. Q-4-20. 監看華山練功場 - TCFSH CIRC Judge</div>
+      <div>http://mysh212.github.io/algosolution/2022/07/24/AP325-d061.cpp/</div>
     </div>
     <div class="license-meta">
       
@@ -425,13 +448,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>發布於</div>
-          <div>2022年2月14日</div>
+          <div>2022年7月24日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新於</div>
-          <div>2024年1月11日</div>
+          <div>2024年1月12日</div>
         </div>
       
       
@@ -462,9 +485,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/algosolution/2022/02/14/mining-water-chestnut.cpp/" title="Codeforces - mining-water-chestnut">
+                      <a href="/algosolution/2022/07/25/AP325-d029.cpp/" title="d029. 習題 Q-3-5. 帶著板凳排雞排的高人 (APCS201902) - TCFSH CIRC Judge">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Codeforces - mining-water-chestnut</span>
+                        <span class="hidden-mobile">d029. 習題 Q-3-5. 帶著板凳排雞排的高人 (APCS201902) - TCFSH CIRC Judge</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -472,8 +495,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/algosolution/2022/02/13/Colten-work-in-THSR.cpp/" title="Codeforces - Colten-work-in-THSR">
-                        <span class="hidden-mobile">Codeforces - Colten-work-in-THSR</span>
+                      <a href="/algosolution/2022/07/24/AP325-d060.cpp/" title="d060. Q-4-19. 五嶽盟主的會議場所 - TCFSH CIRC Judge">
+                        <span class="hidden-mobile">d060. Q-4-19. 五嶽盟主的會議場所 - TCFSH CIRC Judge</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
